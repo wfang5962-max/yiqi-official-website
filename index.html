@@ -138,6 +138,18 @@
         letter-spacing: 0.14em;
       }
 
+      .logo-copy {
+        display: grid;
+        gap: 2px;
+      }
+
+      .logo-tagline {
+        color: var(--brown);
+        font-size: 9px;
+        letter-spacing: 0.12em;
+        white-space: nowrap;
+      }
+
       .nav-links {
         display: flex;
         align-items: center;
@@ -295,6 +307,118 @@
         isolation: isolate;
       }
 
+      .hero-landscape {
+        position: absolute;
+        z-index: -3;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .mountain {
+        position: absolute;
+        right: -6%;
+        bottom: -5%;
+        width: 70%;
+        height: 54%;
+        opacity: 0.42;
+        border-radius: 58% 42% 0 0 / 88% 70% 0 0;
+        background:
+          linear-gradient(142deg, transparent 27%, #67816c1c 28% 29%, transparent 30%),
+          linear-gradient(28deg, transparent 42%, #b99d6730 43% 44%, transparent 45%),
+          linear-gradient(145deg, #dfe3d6a3, #e9dfc9a8);
+        clip-path: polygon(
+          0 100%,
+          12% 67%,
+          24% 78%,
+          39% 38%,
+          49% 57%,
+          65% 18%,
+          75% 47%,
+          85% 31%,
+          100% 65%,
+          100% 100%
+        );
+        filter: blur(0.2px);
+      }
+
+      .mountain-back {
+        right: 18%;
+        bottom: 6%;
+        width: 65%;
+        height: 42%;
+        opacity: 0.22;
+        background: #7e977f;
+        transform: scaleX(-1);
+      }
+
+      .meridian-line {
+        position: absolute;
+        width: 430px;
+        height: 240px;
+        top: 18%;
+        right: 2%;
+        opacity: 0.3;
+        border: 1px solid #9d81504a;
+        border-color: #9d81504a transparent transparent #9d81504a;
+        border-radius: 52% 48% 40% 60%;
+        transform: rotate(-18deg);
+      }
+
+      .meridian-line::before,
+      .meridian-line::after {
+        position: absolute;
+        width: 7px;
+        aspect-ratio: 1;
+        border: 1px solid #b59356;
+        border-radius: 50%;
+        content: "";
+        background: var(--ivory-light);
+        box-shadow: 0 0 0 6px #b5935612;
+      }
+
+      .meridian-line::before {
+        top: 18%;
+        left: 9%;
+      }
+
+      .meridian-line::after {
+        right: 18%;
+        bottom: 8%;
+      }
+
+      .herb-stem {
+        position: absolute;
+        width: 1px;
+        height: 210px;
+        right: 9%;
+        bottom: 6%;
+        opacity: 0.34;
+        background: var(--green-soft);
+        transform: rotate(20deg);
+      }
+
+      .herb-stem::before,
+      .herb-stem::after {
+        position: absolute;
+        width: 48px;
+        height: 24px;
+        border: 1px solid var(--green-soft);
+        border-radius: 100% 0 100% 0;
+        content: "";
+      }
+
+      .herb-stem::before {
+        top: 42px;
+        right: 0;
+      }
+
+      .herb-stem::after {
+        top: 95px;
+        left: 0;
+        transform: scaleX(-1);
+      }
+
       .hero::before {
         position: absolute;
         z-index: -2;
@@ -391,6 +515,51 @@
         border-radius: 50%;
         background: var(--gold);
         box-shadow: 0 0 0 5px #b5935617;
+      }
+
+      .trust-strip {
+        position: relative;
+        z-index: 4;
+        margin-top: -62px;
+        padding-bottom: 78px;
+      }
+
+      .trust-grid {
+        padding: 18px;
+        border: 1px solid #ffffffb8;
+        border-radius: 25px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background: rgba(255, 253, 248, 0.82);
+        box-shadow: 0 22px 65px rgba(62, 52, 34, 0.1);
+        backdrop-filter: blur(18px) saturate(120%);
+      }
+
+      .trust-card {
+        min-height: 108px;
+        padding: 18px 24px;
+        border-right: 1px solid var(--line);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .trust-card:last-child {
+        border-right: 0;
+      }
+
+      .trust-card span {
+        color: var(--brown);
+        font-size: 12px;
+        letter-spacing: 0.1em;
+      }
+
+      .trust-card strong {
+        margin-top: 9px;
+        color: var(--green-deep);
+        font-family: "Songti SC", "STSong", serif;
+        font-size: 20px;
+        line-height: 1.45;
       }
 
       .hero-visual {
@@ -1201,6 +1370,70 @@
           var(--paper);
       }
 
+      .manifesto {
+        overflow: hidden;
+        color: #fffaf0;
+        background:
+          radial-gradient(circle at 16% 22%, #8ca18d2b, transparent 28%),
+          radial-gradient(circle at 84% 78%, #b593561c, transparent 30%),
+          var(--green-deep);
+      }
+
+      .manifesto::before {
+        position: absolute;
+        width: 520px;
+        aspect-ratio: 1;
+        top: 50%;
+        left: 50%;
+        border: 1px solid #d6bd8729;
+        border-radius: 50%;
+        content: "";
+        box-shadow:
+          0 0 0 62px #d6bd8707,
+          0 0 0 124px #d6bd8704;
+        transform: translate(-50%, -50%);
+      }
+
+      .manifesto-inner {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .manifesto-mark {
+        width: 64px;
+        aspect-ratio: 1;
+        margin: 0 auto 28px;
+        border: 1px solid #d6bd8763;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: var(--gold-light);
+        font-family: "Songti SC", "STSong", serif;
+        font-size: 25px;
+      }
+
+      .manifesto h2 {
+        margin: 0;
+        color: #fffaf0;
+        font-size: clamp(36px, 5.4vw, 62px);
+        letter-spacing: -0.03em;
+        line-height: 1.45;
+      }
+
+      .manifesto h2 span {
+        color: var(--gold-light);
+      }
+
+      .manifesto p {
+        max-width: 760px;
+        margin: 28px auto 0;
+        color: #cbd4cd;
+        font-size: clamp(16px, 2vw, 19px);
+        line-height: 2;
+      }
+
       .contact-panel {
         padding: clamp(38px, 6vw, 68px);
         border: 1px solid #ffffffa8;
@@ -1221,32 +1454,6 @@
         margin: 22px 0 0;
         color: var(--muted);
         line-height: 1.9;
-      }
-
-      .contact-options {
-        margin-top: 30px;
-        display: grid;
-        gap: 12px;
-      }
-
-      .contact-option {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        color: #4f5e55;
-      }
-
-      .contact-option i {
-        width: 34px;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        color: var(--green);
-        background: #fffdf8;
-        font-family: "Songti SC", "STSong", serif;
-        font-style: normal;
-        box-shadow: 0 8px 18px #584a3010;
       }
 
       .contact-action {
@@ -1326,6 +1533,325 @@
         margin: 0;
         color: var(--green);
         font-size: 13px;
+      }
+
+      .reason-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .reason-card {
+        position: relative;
+        min-height: 250px;
+        padding: 35px;
+        border: 1px solid #ffffffc7;
+        border-radius: 25px;
+        overflow: hidden;
+        background:
+          linear-gradient(145deg, #fffdf8e8, #f5eddfc4);
+        box-shadow:
+          inset 0 1px 0 #fff,
+          0 20px 55px rgba(69, 57, 38, 0.07);
+        transition:
+          transform 260ms ease,
+          box-shadow 260ms ease,
+          border-color 260ms ease;
+      }
+
+      .reason-card:hover {
+        border-color: #b593564e;
+        box-shadow:
+          inset 0 1px 0 #fff,
+          0 25px 65px rgba(69, 57, 38, 0.12);
+        transform: translateY(-6px);
+      }
+
+      .reason-number {
+        color: var(--gold);
+        font-family: "Songti SC", "STSong", serif;
+        font-size: 13px;
+        letter-spacing: 0.15em;
+      }
+
+      .reason-card h3 {
+        margin: 38px 0 13px;
+        color: var(--green);
+        font-size: 27px;
+      }
+
+      .reason-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.9;
+      }
+
+      .audience {
+        overflow: hidden;
+      }
+
+      .audience::before {
+        position: absolute;
+        width: 460px;
+        aspect-ratio: 1;
+        right: -240px;
+        bottom: -260px;
+        border: 1px solid #b5935627;
+        border-radius: 50%;
+        content: "";
+        box-shadow:
+          0 0 0 55px #b5935607,
+          0 0 0 110px #b5935604;
+      }
+
+      .audience-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .audience-card {
+        min-height: 170px;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 21px;
+        display: flex;
+        align-items: flex-start;
+        gap: 17px;
+        background: rgba(255, 253, 248, 0.78);
+        transition:
+          transform 240ms ease,
+          border-color 240ms ease,
+          box-shadow 240ms ease;
+      }
+
+      .audience-card:hover {
+        border-color: #78927d72;
+        box-shadow: 0 18px 42px #455e4b12;
+        transform: translateY(-5px);
+      }
+
+      .audience-icon {
+        width: 42px;
+        aspect-ratio: 1;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        background: var(--green);
+        font-family: "Songti SC", "STSong", serif;
+        font-size: 18px;
+      }
+
+      .audience-card p {
+        margin: 2px 0 0;
+        color: #4e5b53;
+        font-size: 15px;
+        line-height: 1.75;
+      }
+
+      .first-visit {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 14px;
+      }
+
+      .visit-step {
+        position: relative;
+        min-height: 265px;
+        padding: 28px 24px;
+        border: 1px solid #ffffff14;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.055);
+        transition:
+          transform 230ms ease,
+          background 230ms ease;
+      }
+
+      .visit-step:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-5px);
+      }
+
+      .visit-step:not(:last-child)::after {
+        position: absolute;
+        z-index: 2;
+        width: 28px;
+        height: 1px;
+        top: 47px;
+        right: -21px;
+        content: "";
+        background: var(--gold-light);
+      }
+
+      .visit-index {
+        width: 40px;
+        aspect-ratio: 1;
+        border: 1px solid #d6bd8759;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: var(--gold-light);
+        font-family: "Songti SC", "STSong", serif;
+      }
+
+      .visit-step h3 {
+        margin: 30px 0 12px;
+        color: #fffaf0;
+        font-size: 22px;
+      }
+
+      .visit-step p {
+        margin: 0;
+        color: #c0cbc3;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .cooperation {
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 8% 12%, #99ae9b38, transparent 28%),
+          radial-gradient(circle at 93% 92%, #d8bd8840, transparent 29%),
+          var(--paper);
+      }
+
+      .cooperation-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+
+      .cooperation-card {
+        min-height: 210px;
+        padding: 30px 25px;
+        border: 1px solid #ffffffbf;
+        border-radius: 23px;
+        background: rgba(255, 253, 248, 0.7);
+        box-shadow: 0 18px 45px #57492f0d;
+        transition:
+          transform 240ms ease,
+          box-shadow 240ms ease;
+      }
+
+      .cooperation-card:hover {
+        box-shadow: 0 24px 58px #57492f18;
+        transform: translateY(-6px);
+      }
+
+      .cooperation-card span {
+        color: var(--gold);
+        font-family: "Songti SC", "STSong", serif;
+        font-size: 14px;
+      }
+
+      .cooperation-card h3 {
+        margin: 32px 0 11px;
+        color: var(--green);
+        font-size: 24px;
+      }
+
+      .cooperation-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .cooperation-action {
+        margin-top: 36px;
+        text-align: center;
+      }
+
+      .contact-entry-grid {
+        margin: 29px 0 31px;
+        display: grid;
+        gap: 11px;
+      }
+
+      .contact-entry {
+        padding: 15px;
+        border: 1px solid #766b5618;
+        border-radius: 14px;
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        column-gap: 13px;
+        background: #fffdf875;
+      }
+
+      .contact-entry i {
+        width: 34px;
+        aspect-ratio: 1;
+        grid-row: span 2;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        background: var(--green);
+        font-family: "Songti SC", "STSong", serif;
+        font-style: normal;
+      }
+
+      .contact-entry b {
+        color: var(--green);
+        font-size: 15px;
+      }
+
+      .contact-entry span {
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .contact-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        color: #5b665f;
+        font-size: 13px;
+      }
+
+      .action-dock {
+        position: fixed;
+        z-index: 45;
+        right: 22px;
+        bottom: 22px;
+        padding: 7px;
+        border: 1px solid #ffffffba;
+        border-radius: 999px;
+        display: flex;
+        gap: 6px;
+        background: rgba(255, 253, 248, 0.88);
+        box-shadow: 0 18px 55px rgba(55, 47, 33, 0.18);
+        backdrop-filter: blur(18px);
+        transform: translateY(120px);
+        transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .action-dock.visible {
+        transform: translateY(0);
+      }
+
+      .action-dock a {
+        min-height: 42px;
+        padding: 0 18px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        color: var(--green);
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .action-dock a:first-child {
+        color: #fff;
+        background: var(--green);
       }
 
       .site-footer {
@@ -1435,6 +1961,18 @@
         .values-grid {
           grid-template-columns: repeat(2, 1fr);
         }
+
+        .first-visit {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .visit-step:not(:last-child)::after {
+          display: none;
+        }
+
+        .cooperation-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
 
       @media (max-width: 900px) {
@@ -1521,6 +2059,22 @@
           min-height: 500px;
         }
 
+        .trust-strip {
+          margin-top: -25px;
+        }
+
+        .trust-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .trust-card:nth-child(2) {
+          border-right: 0;
+        }
+
+        .trust-card:nth-child(-n + 2) {
+          border-bottom: 1px solid var(--line);
+        }
+
         .about-emblem {
           margin-inline: auto;
         }
@@ -1539,6 +2093,10 @@
 
         .contact-action {
           grid-template-columns: 1fr 150px;
+        }
+
+        .audience-grid {
+          grid-template-columns: repeat(2, 1fr);
         }
 
         .strategy-card:nth-child(-n + 2),
@@ -1573,6 +2131,36 @@
           min-height: 390px;
         }
 
+        .hero-landscape {
+          opacity: 0.7;
+        }
+
+        .mountain {
+          width: 110%;
+        }
+
+        .meridian-line {
+          right: -55%;
+        }
+
+        .trust-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .trust-card {
+          min-height: 92px;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .trust-card:nth-child(3) {
+          border-bottom: 1px solid var(--line);
+        }
+
+        .trust-card:last-child {
+          border-bottom: 0;
+        }
+
         .health-orbit {
           width: min(330px, 90vw);
         }
@@ -1595,7 +2183,11 @@
 
         .projects-grid,
         .values-grid,
-        .care-grid {
+        .care-grid,
+        .reason-grid,
+        .audience-grid,
+        .first-visit,
+        .cooperation-grid {
           grid-template-columns: 1fr;
         }
 
@@ -1670,6 +2262,27 @@
         .footer-links {
           justify-content: flex-start;
         }
+
+        .action-dock {
+          right: 0;
+          bottom: 0;
+          left: 0;
+          padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+          border: 0;
+          border-top: 1px solid var(--line);
+          border-radius: 0;
+          justify-content: stretch;
+          background: rgba(255, 253, 248, 0.94);
+        }
+
+        .action-dock a {
+          flex: 1;
+          justify-content: center;
+        }
+
+        .site-footer {
+          padding-bottom: 100px;
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -1698,7 +2311,10 @@
       <nav class="nav container" aria-label="主导航">
         <a class="logo" href="#home" aria-label="亿柒首页">
           <span class="logo-seal">亿柒</span>
-          <span class="logo-name">亿柒</span>
+          <span class="logo-copy">
+            <span class="logo-name">亿柒</span>
+            <span class="logo-tagline">内调外养 · 内外兼修</span>
+          </span>
         </a>
 
         <div class="nav-links" id="nav-links">
@@ -1708,6 +2324,7 @@
           <a href="#balance">内调外养</a>
           <a href="#service">门店服务</a>
           <a href="#membership">会员体系</a>
+          <a href="#cooperation">加盟合作</a>
           <a href="#contact">联系我们</a>
         </div>
 
@@ -1728,16 +2345,23 @@
 
     <main>
       <section class="hero" id="home">
+        <div class="hero-landscape" aria-hidden="true">
+          <span class="mountain mountain-back"></span>
+          <span class="mountain"></span>
+          <span class="meridian-line"></span>
+          <span class="herb-stem"></span>
+        </div>
         <div class="hero-grid container">
           <div class="hero-copy reveal visible">
             <p class="eyebrow">内调外养 · 内外兼修</p>
             <h1>弘扬中医文化，<br />守护中老年健康</h1>
             <p class="hero-description">
-              亿柒专注中医健康管理，融合传统养生智慧、标准化服务体系与数字化运营能力，为中老年人提供可信赖、可持续的健康解决方案。
+              亿柒以“内调外养，内外兼修”为核心理念，面向50岁以上新老人，提供门店体验、健康管理、会员陪伴与长期调理建议，让健康从一次体验走向持续改善。
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#contact">立即预约体验</a>
-              <a class="button button-ghost" href="#about">了解亿柒模式</a>
+              <a class="button button-primary" href="#contact">预约到店体验</a>
+              <a class="button button-ghost" href="#balance">了解内调外养</a>
+              <a class="button button-ghost" href="#cooperation">咨询合作加盟</a>
             </div>
             <p class="hero-note">
               <span></span>
@@ -1762,6 +2386,27 @@
         </div>
       </section>
 
+      <section class="trust-strip" aria-label="亿柒信任背书">
+        <div class="trust-grid container reveal">
+          <article class="trust-card">
+            <span>服务对象</span>
+            <strong>50岁以上新老人</strong>
+          </article>
+          <article class="trust-card">
+            <span>核心理念</span>
+            <strong>内调外养</strong>
+          </article>
+          <article class="trust-card">
+            <span>服务方式</span>
+            <strong>门店体验 + 长期陪伴</strong>
+          </article>
+          <article class="trust-card">
+            <span>发展方向</span>
+            <strong>实效健康管理平台</strong>
+          </article>
+        </div>
+      </section>
+
       <section class="section section-soft" id="about">
         <div class="about-grid container">
           <div class="about-emblem reveal">
@@ -1771,7 +2416,10 @@
             <p class="section-label">关于亿柒</p>
             <h2>亿柒是谁？</h2>
             <p>
-              亿柒以“内调外养，内外兼修”为核心理念，专注服务中老年健康需求。我们希望通过专业的门店服务、健康产品、长期陪伴和会员管理体系，让更多中老年人拥有轻松、自在、有质量的晚年生活。
+              中国正迎来充满活力的“新老人”时代。越来越多50岁以上人群，不只关注身体感受，也追求更主动、更有品质的生活方式。亿柒因此而生——希望让传统中医养生智慧，以更专业、更温暖、更容易坚持的方式融入日常。
+            </p>
+            <p>
+              我们强调实效健康，是因为信任来自真实可感的服务体验；我们选择长期陪伴，是因为健康从来不是一次消费，而是需要时间、专业与耐心共同守护的生活方式。
             </p>
             <div class="principles">
               <span>传统养生智慧</span>
@@ -1853,6 +2501,48 @@
         </div>
       </section>
 
+      <section class="section section-soft" id="why-yiqi">
+        <div class="container">
+          <header class="section-heading reveal">
+            <p class="section-label">选择亿柒</p>
+            <h2>为什么越来越多新老人需要亿柒？</h2>
+            <p>
+              健康需求正在从单次体验走向持续管理，亿柒以专业、实效与陪伴回应这份变化。
+            </p>
+          </header>
+          <div class="reason-grid">
+            <article class="reason-card reveal">
+              <span class="reason-number">01</span>
+              <h3>健康需求正在变化</h3>
+              <p>
+                新老人不只追求少生病，更重视精力、体感、睡眠、行动力和生活质量。
+              </p>
+            </article>
+            <article class="reason-card reveal delay-1">
+              <span class="reason-number">02</span>
+              <h3>单次服务不够</h3>
+              <p>
+                健康管理不是一次体验，而是持续记录、持续跟进、持续陪伴。
+              </p>
+            </article>
+            <article class="reason-card reveal">
+              <span class="reason-number">03</span>
+              <h3>信任来自实效</h3>
+              <p>
+                亿柒坚持诚信为本、实效第一，用真实体感和长期服务建立信任。
+              </p>
+            </article>
+            <article class="reason-card reveal delay-1">
+              <span class="reason-number">04</span>
+              <h3>门店需要标准化</h3>
+              <p>
+                亿柒通过标准流程、专业手法、会员体系和数字化工具，让服务更稳定、更可复制。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section section-green" id="projects">
         <div class="container">
           <header class="section-heading reveal">
@@ -1866,32 +2556,32 @@
             <article class="project-card reveal">
               <span class="project-icon">足</span>
               <h3>足疗</h3>
-              <p>通过足部舒缓与放松，帮助卸下一日疲惫，感受身心轻松。</p>
+              <p>以细致手法舒缓足部紧绷感，在温润体验中卸下一日疲惫。</p>
             </article>
             <article class="project-card reveal delay-1">
               <span class="project-icon">头</span>
               <h3>头疗</h3>
-              <p>以温和手法放松头颈区域，舒缓紧绷感，带来安宁体验。</p>
+              <p>以温和节奏放松头颈区域，帮助舒缓压力，感受身心安宁。</p>
             </article>
             <article class="project-card reveal delay-2">
               <span class="project-icon">艾</span>
               <h3>艾灸</h3>
-              <p>借助艾草温热特性进行日常养护，帮助温养身心、改善体感。</p>
+              <p>借助艾草温热特性进行日常养护，带来温暖舒适的身体感受。</p>
             </article>
             <article class="project-card reveal">
               <span class="project-icon">泥</span>
               <h3>泥灸</h3>
-              <p>以温热敷养方式带来持续暖意，适合日常祛湿排寒体验。</p>
+              <p>以温热敷养方式带来持续暖意，为日常祛湿排寒提供舒适体验。</p>
             </article>
             <article class="project-card reveal delay-1">
               <span class="project-icon">蜡</span>
               <h3>蜂蜡疗法</h3>
-              <p>利用蜂蜡温润包裹感进行局部养护，帮助放松与舒缓。</p>
+              <p>利用蜂蜡温润包裹感进行局部养护，让身体在暖意中逐渐放松。</p>
             </article>
             <article class="project-card reveal delay-2">
               <span class="project-icon">络</span>
               <h3>经络推拿</h3>
-              <p>通过专业手法舒展身体、放松肌肉，改善日常疲劳体感。</p>
+              <p>通过规范手法舒展身体、放松肌肉，帮助改善日常疲劳体感。</p>
             </article>
           </div>
         </div>
@@ -1909,7 +2599,7 @@
               <h3>外养</h3>
               <p>通过门店项目与专业服务，帮助舒缓身心、改善体感。</p>
               <div class="balance-list">
-                <span>经络排毒</span>
+                <span>经络疏通</span>
                 <span>祛湿排寒</span>
                 <span>缓解疲劳</span>
                 <span>改善体感</span>
@@ -1926,13 +2616,49 @@
               <h3>内调</h3>
               <p>结合个体需求，提供多样化营养补充与日常滋养选择。</p>
               <div class="balance-list">
-                <span>羊奶粉</span>
-                <span>牛初乳</span>
-                <span>益生菌</span>
-                <span>红景天</span>
-                <span>灵芝孢子油</span>
-                <span>膏方滋补</span>
+                <span>营养补充</span>
+                <span>免疫支持</span>
+                <span>肠道调理</span>
+                <span>长期滋养</span>
               </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft audience" id="audience">
+        <div class="container">
+          <header class="section-heading reveal">
+            <p class="section-label">适合人群</p>
+            <h2>亿柒适合哪些人？</h2>
+            <p>
+              亿柒面向重视日常养生与长期健康管理的人群，提供温和、有序的服务支持。
+            </p>
+          </header>
+          <div class="audience-grid">
+            <article class="audience-card reveal">
+              <span class="audience-icon">龄</span>
+              <p>50岁以上关注健康管理的新老人</p>
+            </article>
+            <article class="audience-card reveal delay-1">
+              <span class="audience-icon">息</span>
+              <p>长期感觉疲劳、睡眠质量下降的人群</p>
+            </article>
+            <article class="audience-card reveal delay-2">
+              <span class="audience-icon">养</span>
+              <p>重视养生、愿意长期调理的人群</p>
+            </article>
+            <article class="audience-card reveal">
+              <span class="audience-icon">舒</span>
+              <p>希望通过外养项目改善体感的人群</p>
+            </article>
+            <article class="audience-card reveal delay-1">
+              <span class="audience-icon">营</span>
+              <p>关注营养补充和生活方式管理的人群</p>
+            </article>
+            <article class="audience-card reveal delay-2">
+              <span class="audience-icon">伴</span>
+              <p>希望有人长期提醒、陪伴和回访的人群</p>
             </article>
           </div>
         </div>
@@ -2002,6 +2728,45 @@
         </div>
       </section>
 
+      <section class="section section-green" id="first-visit">
+        <div class="container">
+          <header class="section-heading reveal">
+            <p class="section-label">首次到店体验</p>
+            <h2>第一次到亿柒，您会经历什么？</h2>
+            <p>
+              从预约到回访，我们用清晰流程降低陌生感，让每一次体验更安心。
+            </p>
+          </header>
+          <div class="first-visit">
+            <article class="visit-step reveal">
+              <span class="visit-index">壹</span>
+              <h3>预约咨询</h3>
+              <p>了解基本需求，安排合适到店时间。</p>
+            </article>
+            <article class="visit-step reveal delay-1">
+              <span class="visit-index">贰</span>
+              <h3>到店接待</h3>
+              <p>由工作人员进行基础沟通和服务介绍。</p>
+            </article>
+            <article class="visit-step reveal delay-2">
+              <span class="visit-index">叁</span>
+              <h3>体质了解</h3>
+              <p>了解睡眠、饮食、疲劳、生活习惯等基础情况。</p>
+            </article>
+            <article class="visit-step reveal delay-3">
+              <span class="visit-index">肆</span>
+              <h3>项目体验</h3>
+              <p>根据需求体验足疗、头疗、艾灸、泥灸等外养项目。</p>
+            </article>
+            <article class="visit-step reveal delay-3">
+              <span class="visit-index">伍</span>
+              <h3>回访跟进</h3>
+              <p>记录反馈，持续提供适合的健康管理建议。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section">
         <div class="container">
           <header class="section-heading reveal">
@@ -2033,21 +2798,85 @@
         </div>
       </section>
 
+      <section class="section manifesto" aria-label="亿柒品牌宣言">
+        <div class="manifesto-inner container reveal">
+          <span class="manifesto-mark">柒</span>
+          <h2>
+            健康，不只是一次体验。<br />
+            <span>健康，是一种长期陪伴。</span>
+          </h2>
+          <p>
+            亿柒相信，真正的实效健康，来自专业、诚信、坚持与时间。<br />
+            我们愿以中医养生智慧，陪伴更多新老人，活得更轻松、更自在、更有价值。
+          </p>
+        </div>
+      </section>
+
+      <section class="section cooperation" id="cooperation">
+        <div class="container">
+          <header class="section-heading reveal">
+            <p class="section-label">加盟合作</p>
+            <h2>与亿柒一起，服务7亿新老人</h2>
+            <p>
+              亿柒面向有长期主义理念、有服务意识、有健康产业热情的合作伙伴，共同打造实效健康管理平台。
+            </p>
+          </header>
+          <div class="cooperation-grid">
+            <article class="cooperation-card reveal">
+              <span>合作方向一</span>
+              <h3>门店合作</h3>
+              <p>围绕标准化服务与会员陪伴，共建有温度的健康服务门店。</p>
+            </article>
+            <article class="cooperation-card reveal delay-1">
+              <span>合作方向二</span>
+              <h3>区域合作</h3>
+              <p>携手认同长期主义的伙伴，稳步拓展区域健康服务网络。</p>
+            </article>
+            <article class="cooperation-card reveal delay-2">
+              <span>合作方向三</span>
+              <h3>产品合作</h3>
+              <p>引入符合品牌理念的优质产品，丰富长期营养支持选择。</p>
+            </article>
+            <article class="cooperation-card reveal delay-3">
+              <span>合作方向四</span>
+              <h3>健康管理项目合作</h3>
+              <p>整合专业能力与服务资源，共同完善健康管理解决方案。</p>
+            </article>
+          </div>
+          <div class="cooperation-action reveal">
+            <a class="button button-primary" href="#contact">咨询合作加盟</a>
+          </div>
+        </div>
+      </section>
+
       <section class="section contact" id="contact">
         <div class="contact-panel container">
           <div class="contact-copy reveal">
             <p class="section-label">联系我们</p>
             <h2>开启您的亿柒<br />健康体验</h2>
             <p>
-              无论您想预约体验、咨询合作，还是了解门店加盟，我们都期待与您交流。
+              无论是为自己和家人预约一次温润舒适的养生体验，还是咨询品牌合作与门店加盟，亿柒都将以真诚、专业的态度回应您的每一份信任。
             </p>
-            <div class="contact-options">
-              <div class="contact-option"><i>体</i><span>预约体验</span></div>
-              <div class="contact-option"><i>合</i><span>合作咨询</span></div>
-              <div class="contact-option"><i>店</i><span>门店加盟</span></div>
-              <div class="contact-option">
-                <i>电</i><span>客服电话：400-000-0000</span>
+            <div class="contact-entry-grid">
+              <div class="contact-entry">
+                <i>体</i>
+                <b>预约体验</b>
+                <span>适合想了解亿柒服务和体验项目的用户。</span>
               </div>
+              <div class="contact-entry">
+                <i>合</i>
+                <b>合作咨询</b>
+                <span>适合想了解亿柒模式、项目和合作方式的伙伴。</span>
+              </div>
+              <div class="contact-entry">
+                <i>店</i>
+                <b>门店加盟</b>
+                <span>适合有门店经营、健康服务或区域资源的合作伙伴。</span>
+              </div>
+            </div>
+            <div class="contact-meta">
+              <span>客服电话：400-000-0000</span>
+              <span>微信：YIQI-HEALTH</span>
             </div>
           </div>
 
@@ -2104,6 +2933,11 @@
       </section>
     </main>
 
+    <aside class="action-dock" id="action-dock" aria-label="快捷行动">
+      <a href="#contact">预约体验</a>
+      <a href="#cooperation">咨询合作</a>
+    </aside>
+
     <footer class="site-footer">
       <div class="container">
         <div class="footer-main">
@@ -2133,9 +2967,11 @@
       const revealItems = document.querySelectorAll(".reveal");
       const contactForm = document.querySelector("#contact-form");
       const formStatus = document.querySelector("#form-status");
+      const actionDock = document.querySelector("#action-dock");
 
       const updateHeader = () => {
         header.classList.toggle("scrolled", window.scrollY > 16);
+        actionDock.classList.toggle("visible", window.scrollY > 520);
       };
 
       updateHeader();
