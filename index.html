@@ -1,0 +1,3484 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="亿柒专注中医养生与实效健康管理，坚持内调外养、内外兼修，面向50岁以上新老人，提供门店体验、会员陪伴、长期健康管理与直营体系建设。"
+    />
+    <meta
+      name="keywords"
+      content="亿柒，中医养生，健康管理，内调外养，新老人，门店体验，会员陪伴，长期健康管理，直营体系"
+    />
+    <meta name="theme-color" content="#f7f2e8" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="亿柒健康管理｜内调外养，服务7亿新老人"
+    />
+    <meta
+      property="og:description"
+      content="亿柒专注中医养生与实效健康管理，面向50岁以上新老人，提供门店体验、会员陪伴与长期健康管理。"
+    />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="亿柒健康管理" />
+    <title>亿柒健康管理｜内调外养，服务7亿新老人</title>
+    <style>
+      :root {
+        --ivory: #f7f2e8;
+        --ivory-light: #fffdf8;
+        --paper: #eee5d5;
+        --green: #234b3b;
+        --green-deep: #17382d;
+        --green-soft: #5f7b69;
+        --gold: #b59356;
+        --gold-light: #d6bd87;
+        --brown: #765a3d;
+        --ink: #28352f;
+        --muted: #6d756f;
+        --line: rgba(84, 74, 54, 0.14);
+        --shadow: 0 24px 70px rgba(62, 52, 34, 0.1);
+        font-family:
+          "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC",
+          -apple-system, BlinkMacSystemFont, sans-serif;
+        color: var(--ink);
+        background: var(--ivory);
+        font-synthesis: none;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 96px;
+      }
+
+      section[id] {
+        scroll-margin-top: 96px;
+      }
+
+      body {
+        min-width: 320px;
+        margin: 0;
+        overflow-x: hidden;
+        font-size: 16px;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        background:
+          radial-gradient(circle at 8% 18%, #e7d7b654, transparent 25%),
+          var(--ivory);
+      }
+
+      body::before {
+        position: fixed;
+        z-index: 100;
+        inset: 0;
+        content: "";
+        opacity: 0.022;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      }
+
+      a {
+        color: inherit;
+      }
+
+      button,
+      input,
+      textarea {
+        font: inherit;
+      }
+
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      :focus-visible {
+        outline: 3px solid rgba(35, 75, 59, 0.28);
+        outline-offset: 3px;
+      }
+
+      .container {
+        width: min(1180px, calc(100% - 48px));
+        margin-inline: auto;
+      }
+
+      .site-header {
+        position: fixed;
+        z-index: 50;
+        top: 0;
+        right: 0;
+        left: 0;
+        border-bottom: 1px solid transparent;
+        transition:
+          background 250ms ease,
+          border-color 250ms ease,
+          box-shadow 250ms ease;
+      }
+
+      .site-header.scrolled {
+        border-color: var(--line);
+        background: rgba(255, 253, 248, 0.88);
+        box-shadow: 0 10px 40px rgba(55, 47, 33, 0.06);
+        backdrop-filter: blur(18px) saturate(130%);
+      }
+
+      .nav {
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        flex: 0 0 auto;
+        color: var(--green-deep);
+        text-decoration: none;
+      }
+
+      .logo-seal {
+        width: 38px;
+        aspect-ratio: 1;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--green);
+        border-radius: 50% 50% 48% 52%;
+        color: var(--ivory-light);
+        background: var(--green);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 17px;
+        box-shadow: inset 0 0 0 3px var(--green), inset 0 0 0 4px #ffffff45;
+      }
+
+      .logo-name {
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+      }
+
+      .logo-copy {
+        display: grid;
+        gap: 2px;
+      }
+
+      .logo-tagline {
+        color: var(--brown);
+        font-size: 9px;
+        letter-spacing: 0.12em;
+        white-space: nowrap;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: clamp(16px, 2.1vw, 30px);
+      }
+
+      .nav-links a {
+        position: relative;
+        color: #46544c;
+        font-size: 14px;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: color 180ms ease;
+      }
+
+      .nav-links a::after {
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+        left: 0;
+        height: 1px;
+        content: "";
+        background: var(--gold);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 220ms ease;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--green);
+      }
+
+      .nav-links a:hover::after,
+      .nav-links a.active::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      .button {
+        min-height: 48px;
+        padding: 0 24px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition:
+          transform 180ms ease,
+          background 180ms ease,
+          border-color 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      .button-primary {
+        color: #fffdf8;
+        background: var(--green);
+        box-shadow: 0 12px 28px rgba(35, 75, 59, 0.2);
+      }
+
+      .button-primary:hover {
+        background: var(--green-deep);
+        box-shadow: 0 16px 34px rgba(35, 75, 59, 0.26);
+      }
+
+      .button-ghost {
+        border-color: rgba(35, 75, 59, 0.35);
+        color: var(--green);
+        background: rgba(255, 253, 248, 0.45);
+        backdrop-filter: blur(8px);
+      }
+
+      .button-ghost:hover {
+        border-color: var(--green);
+        background: rgba(255, 253, 248, 0.8);
+      }
+
+      .nav-appointment {
+        min-height: 40px;
+        padding-inline: 18px;
+        font-size: 14px;
+      }
+
+      .menu-button {
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        display: none;
+        place-items: center;
+        color: var(--green);
+        background: rgba(255, 253, 248, 0.72);
+        cursor: pointer;
+      }
+
+      .menu-icon,
+      .menu-icon::before,
+      .menu-icon::after {
+        width: 18px;
+        height: 1.5px;
+        display: block;
+        background: currentColor;
+        transition: transform 200ms ease;
+      }
+
+      .menu-icon {
+        position: relative;
+      }
+
+      .menu-icon::before,
+      .menu-icon::after {
+        position: absolute;
+        left: 0;
+        content: "";
+      }
+
+      .menu-icon::before {
+        top: -6px;
+      }
+
+      .menu-icon::after {
+        top: 6px;
+      }
+
+      .menu-button.open .menu-icon {
+        background: transparent;
+      }
+
+      .menu-button.open .menu-icon::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      .menu-button.open .menu-icon::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 820px;
+        padding: 145px 0 90px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      .hero-landscape {
+        position: absolute;
+        z-index: -3;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .mountain {
+        position: absolute;
+        right: -6%;
+        bottom: -5%;
+        width: 70%;
+        height: 54%;
+        opacity: 0.42;
+        border-radius: 58% 42% 0 0 / 88% 70% 0 0;
+        background:
+          linear-gradient(142deg, transparent 27%, #67816c1c 28% 29%, transparent 30%),
+          linear-gradient(28deg, transparent 42%, #b99d6730 43% 44%, transparent 45%),
+          linear-gradient(145deg, #dfe3d6a3, #e9dfc9a8);
+        clip-path: polygon(
+          0 100%,
+          12% 67%,
+          24% 78%,
+          39% 38%,
+          49% 57%,
+          65% 18%,
+          75% 47%,
+          85% 31%,
+          100% 65%,
+          100% 100%
+        );
+        filter: blur(0.2px);
+      }
+
+      .mountain-back {
+        right: 18%;
+        bottom: 6%;
+        width: 65%;
+        height: 42%;
+        opacity: 0.22;
+        background: #7e977f;
+        transform: scaleX(-1);
+      }
+
+      .meridian-line {
+        position: absolute;
+        width: 430px;
+        height: 240px;
+        top: 18%;
+        right: 2%;
+        opacity: 0.3;
+        border: 1px solid #9d81504a;
+        border-color: #9d81504a transparent transparent #9d81504a;
+        border-radius: 52% 48% 40% 60%;
+        transform: rotate(-18deg);
+      }
+
+      .meridian-line::before,
+      .meridian-line::after {
+        position: absolute;
+        width: 7px;
+        aspect-ratio: 1;
+        border: 1px solid #b59356;
+        border-radius: 50%;
+        content: "";
+        background: var(--ivory-light);
+        box-shadow: 0 0 0 6px #b5935612;
+      }
+
+      .meridian-line::before {
+        top: 18%;
+        left: 9%;
+      }
+
+      .meridian-line::after {
+        right: 18%;
+        bottom: 8%;
+      }
+
+      .herb-stem {
+        position: absolute;
+        width: 1px;
+        height: 210px;
+        right: 9%;
+        bottom: 6%;
+        opacity: 0.34;
+        background: var(--green-soft);
+        transform: rotate(20deg);
+      }
+
+      .herb-stem::before,
+      .herb-stem::after {
+        position: absolute;
+        width: 48px;
+        height: 24px;
+        border: 1px solid var(--green-soft);
+        border-radius: 100% 0 100% 0;
+        content: "";
+      }
+
+      .herb-stem::before {
+        top: 42px;
+        right: 0;
+      }
+
+      .herb-stem::after {
+        top: 95px;
+        left: 0;
+        transform: scaleX(-1);
+      }
+
+      .hero::before {
+        position: absolute;
+        z-index: -2;
+        width: min(760px, 65vw);
+        aspect-ratio: 1;
+        top: -32%;
+        right: -12%;
+        border-radius: 50%;
+        content: "";
+        background: radial-gradient(circle, #e3cfa686, transparent 67%);
+        filter: blur(5px);
+      }
+
+      .hero::after {
+        position: absolute;
+        z-index: -2;
+        width: 480px;
+        aspect-ratio: 1;
+        bottom: -36%;
+        left: -12%;
+        border-radius: 50%;
+        content: "";
+        background: radial-gradient(circle, #95ae994a, transparent 68%);
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        align-items: center;
+        gap: clamp(50px, 8vw, 105px);
+      }
+
+      .eyebrow {
+        margin: 0 0 22px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--brown);
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+      }
+
+      .eyebrow::before {
+        width: 34px;
+        height: 1px;
+        content: "";
+        background: var(--gold);
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family:
+          "Songti SC", "STSong", "SimSun", "PingFang SC",
+          "Microsoft YaHei", serif;
+        text-wrap: balance;
+        word-break: normal;
+      }
+
+      .title-keep {
+        display: inline-block;
+        white-space: nowrap;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 0;
+        color: var(--green-deep);
+        font-size: clamp(46px, 6.2vw, 76px);
+        font-weight: 700;
+        letter-spacing: -0.018em;
+        line-height: 1.16;
+      }
+
+      .hero-description {
+        max-width: 660px;
+        margin: 30px 0 0;
+        color: #5f6862;
+        font-size: clamp(17px, 1.6vw, 20px);
+        line-height: 1.85;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 38px;
+      }
+
+      .hero-note {
+        margin-top: 26px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #7a817b;
+        font-size: 13px;
+      }
+
+      .hero-note span {
+        width: 6px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: var(--gold);
+        box-shadow: 0 0 0 5px #b5935617;
+      }
+
+      .trust-strip {
+        position: relative;
+        z-index: 4;
+        margin-top: -62px;
+        padding-bottom: 78px;
+      }
+
+      .trust-grid {
+        padding: 18px;
+        border: 1px solid #ffffffb8;
+        border-radius: 25px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background: rgba(255, 253, 248, 0.82);
+        box-shadow: 0 22px 65px rgba(62, 52, 34, 0.1);
+        backdrop-filter: blur(18px) saturate(120%);
+      }
+
+      .trust-card {
+        min-height: 108px;
+        padding: 18px 24px;
+        border-right: 1px solid var(--line);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .trust-card:last-child {
+        border-right: 0;
+      }
+
+      .trust-card span {
+        color: var(--brown);
+        font-size: 12px;
+        letter-spacing: 0.1em;
+      }
+
+      .trust-card strong {
+        margin-top: 9px;
+        color: var(--green-deep);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 20px;
+        line-height: 1.45;
+      }
+
+      .hero-visual {
+        position: relative;
+        min-height: 560px;
+        display: grid;
+        place-items: center;
+      }
+
+      .health-orbit {
+        position: relative;
+        width: min(470px, 90vw);
+        aspect-ratio: 1;
+        border: 1px solid #937a4e21;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at 50% 43%, #fffdf8e6 0 36%, transparent 37%),
+          radial-gradient(circle, #d8c2971f, transparent 67%);
+        box-shadow:
+          inset 0 0 0 36px #ffffff2e,
+          0 35px 90px #5c4c2f17;
+        animation: breathe 7s ease-in-out infinite;
+      }
+
+      .health-orbit::before,
+      .health-orbit::after {
+        position: absolute;
+        border: 1px dashed #b5935642;
+        border-radius: 50%;
+        content: "";
+      }
+
+      .health-orbit::before {
+        inset: 14%;
+        animation: slow-turn 36s linear infinite;
+      }
+
+      .health-orbit::after {
+        inset: 29%;
+        border-style: solid;
+        border-color: #234b3b24;
+      }
+
+      .orbit-center {
+        position: relative;
+        z-index: 2;
+        width: 155px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        color: #fffdf8;
+        background:
+          radial-gradient(circle at 32% 28%, #557562, transparent 38%),
+          var(--green);
+        box-shadow:
+          0 24px 55px rgba(35, 75, 59, 0.25),
+          inset 0 0 0 1px #ffffff25;
+      }
+
+      .orbit-center strong {
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 36px;
+        letter-spacing: 0.12em;
+        text-indent: 0.12em;
+      }
+
+      .orbit-center small {
+        margin-top: 6px;
+        color: #e9dfcb;
+        font-size: 11px;
+        letter-spacing: 0.18em;
+      }
+
+      .orbit-item {
+        position: absolute;
+        z-index: 3;
+        width: 88px;
+        aspect-ratio: 1;
+        border: 1px solid #ffffffb8;
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+        gap: 5px;
+        text-align: center;
+        color: var(--green);
+        background: rgba(255, 253, 248, 0.83);
+        box-shadow: 0 16px 36px #4e422d16;
+        backdrop-filter: blur(12px);
+      }
+
+      .orbit-item i {
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 23px;
+        font-style: normal;
+      }
+
+      .orbit-item span {
+        font-size: 12px;
+      }
+
+      .orbit-item:nth-of-type(2) {
+        top: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .orbit-item:nth-of-type(3) {
+        top: 50%;
+        right: -2%;
+        transform: translateY(-50%);
+      }
+
+      .orbit-item:nth-of-type(4) {
+        bottom: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .orbit-item:nth-of-type(5) {
+        top: 50%;
+        left: -2%;
+        transform: translateY(-50%);
+      }
+
+      .leaf {
+        position: absolute;
+        z-index: -1;
+        width: 105px;
+        height: 220px;
+        opacity: 0.32;
+        border: 1px solid var(--green-soft);
+        border-radius: 100% 0 100% 0;
+        transform: rotate(33deg);
+      }
+
+      .leaf-one {
+        top: 8%;
+        right: 0;
+      }
+
+      .leaf-two {
+        bottom: 5%;
+        left: 0;
+        transform: scale(0.75) rotate(210deg);
+      }
+
+      .section {
+        position: relative;
+        padding: 104px 0;
+      }
+
+      .section-soft {
+        background: rgba(255, 253, 248, 0.72);
+      }
+
+      .section-green {
+        color: #f8f3e9;
+        background:
+          radial-gradient(circle at 90% 10%, #78907c1f, transparent 28%),
+          var(--green-deep);
+      }
+
+      .section-heading {
+        max-width: 720px;
+        margin: 0 auto 50px;
+        text-align: center;
+      }
+
+      .section-label {
+        margin: 0 0 15px;
+        color: var(--brown);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+      }
+
+      .section-green .section-label {
+        color: var(--gold-light);
+      }
+
+      .section-heading h2,
+      .split-copy h2 {
+        margin: 0;
+        color: var(--green-deep);
+        font-size: clamp(36px, 5vw, 56px);
+        letter-spacing: -0.018em;
+        line-height: 1.28;
+      }
+
+      .section-green .section-heading h2 {
+        color: #fffaf0;
+      }
+
+      .section-heading p {
+        margin: 22px 0 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.85;
+      }
+
+      .section-green .section-heading p {
+        color: #d3d8d1;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        align-items: center;
+        gap: clamp(55px, 9vw, 120px);
+      }
+
+      .about-emblem {
+        position: relative;
+        width: min(430px, 100%);
+        aspect-ratio: 1;
+        border: 1px solid #b5935640;
+        border-radius: 48% 52% 46% 54%;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle, #fffdf8 0 30%, transparent 31%),
+          repeating-radial-gradient(
+            circle,
+            transparent 0 42px,
+            #b5935612 43px 44px
+          ),
+          #eee4d1a8;
+        box-shadow: var(--shadow);
+      }
+
+      .about-emblem::before,
+      .about-emblem::after {
+        position: absolute;
+        width: 80px;
+        height: 150px;
+        border: 1px solid #51705a73;
+        border-radius: 100% 0 100% 0;
+        content: "";
+      }
+
+      .about-emblem::before {
+        top: 18%;
+        right: 21%;
+        transform: rotate(28deg);
+      }
+
+      .about-emblem::after {
+        bottom: 18%;
+        left: 21%;
+        transform: rotate(208deg);
+      }
+
+      .emblem-word {
+        z-index: 2;
+        width: 138px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        background: var(--green);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 43px;
+        letter-spacing: 0.13em;
+        text-indent: 0.13em;
+        box-shadow: 0 24px 50px #234b3b3b;
+      }
+
+      .split-copy .section-label {
+        margin-bottom: 16px;
+      }
+
+      .split-copy > p {
+        margin: 28px 0 0;
+        color: #626d66;
+        font-size: 18px;
+        line-height: 2;
+      }
+
+      .principles {
+        margin-top: 34px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .principles span {
+        padding: 9px 16px;
+        border: 1px solid #b5935638;
+        border-radius: 999px;
+        color: var(--brown);
+        background: #fffdf880;
+        font-size: 14px;
+      }
+
+      .strategy {
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 8% 18%, #b7c8b336, transparent 25%),
+          radial-gradient(circle at 92% 82%, #decba541, transparent 28%),
+          var(--ivory);
+      }
+
+      .strategy::before {
+        position: absolute;
+        width: 420px;
+        aspect-ratio: 1;
+        top: -265px;
+        right: -155px;
+        border: 1px solid #b5935623;
+        border-radius: 50%;
+        content: "";
+        box-shadow:
+          0 0 0 52px #b5935608,
+          0 0 0 104px #b5935605;
+      }
+
+      .strategy .section-heading h2 {
+        letter-spacing: -0.01em;
+      }
+
+      .strategy-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 16px;
+      }
+
+      .strategy-card {
+        position: relative;
+        min-height: 205px;
+        padding: 26px 27px;
+        border: 1px solid rgba(181, 147, 86, 0.16);
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: rgba(255, 253, 248, 0.68);
+        box-shadow:
+          inset 0 1px 0 #fff,
+          0 12px 34px rgba(68, 57, 38, 0.055);
+        backdrop-filter: blur(12px);
+        transition:
+          transform 280ms cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 280ms ease,
+          box-shadow 280ms ease;
+      }
+
+      .strategy-card:nth-child(-n + 2) {
+        min-height: 225px;
+        grid-column: span 3;
+      }
+
+      .strategy-card:nth-child(n + 3) {
+        min-height: 190px;
+        grid-column: span 2;
+      }
+
+      .strategy-card::before {
+        position: absolute;
+        width: 128px;
+        aspect-ratio: 1;
+        top: -78px;
+        right: -62px;
+        border: 1px solid #b5935629;
+        border-radius: 50%;
+        content: "";
+        box-shadow: 0 0 0 16px #b5935606;
+        transition: transform 400ms ease;
+      }
+
+      .strategy-card:hover {
+        border-color: #b593563d;
+        box-shadow:
+          inset 0 1px 0 #fff,
+          0 18px 42px rgba(68, 57, 38, 0.085);
+        transform: translateY(-4px);
+      }
+
+      .strategy-card:hover::before {
+        transform: scale(1.13);
+      }
+
+      .strategy-card-featured {
+        color: #f8f3e9;
+        border-color: rgba(214, 189, 135, 0.22);
+        background:
+          radial-gradient(circle at 100% 0%, #8ca08d2e, transparent 46%),
+          var(--green);
+        box-shadow: 0 18px 44px rgba(35, 75, 59, 0.14);
+      }
+
+      .strategy-card-featured::before {
+        border-color: #d6bd8742;
+        box-shadow: 0 0 0 18px #d6bd8708;
+      }
+
+      .strategy-topline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .strategy-index {
+        color: var(--gold);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 13px;
+        letter-spacing: 0.12em;
+      }
+
+      .strategy-card-featured .strategy-index {
+        color: var(--gold-light);
+      }
+
+      .strategy-card h3 {
+        margin: 0;
+        color: var(--brown);
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+      }
+
+      .strategy-card-featured h3 {
+        color: #dfcca2;
+        font-size: 19px;
+      }
+
+      .strategy-core {
+        position: relative;
+        z-index: 1;
+        margin: 22px 0 0;
+        color: var(--green-deep);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: clamp(21px, 2vw, 27px);
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.45;
+        text-wrap: balance;
+        word-break: keep-all;
+      }
+
+      .strategy-card-featured .strategy-core {
+        color: #fffaf0;
+        font-size: clamp(27px, 2.8vw, 36px);
+        line-height: 1.35;
+      }
+
+      .strategy-explain {
+        position: relative;
+        z-index: 1;
+        margin: 17px 0 0;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .strategy-card-featured .strategy-explain {
+        border-color: #ffffff1c;
+        color: #cbd4cd;
+        font-size: 14px;
+      }
+
+      .strategy-declaration {
+        margin: 24px 0 0;
+        padding: 20px 28px;
+        border: 1px solid rgba(181, 147, 86, 0.22);
+        border-radius: 14px;
+        color: var(--green-deep);
+        text-align: center;
+        background: rgba(255, 253, 248, 0.52);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: clamp(17px, 2vw, 21px);
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        line-height: 1.7;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .project-card {
+        position: relative;
+        min-height: 265px;
+        padding: 32px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.055);
+        box-shadow: inset 0 1px 0 #ffffff0a;
+        transition:
+          transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+          background 300ms ease,
+          border-color 300ms ease;
+      }
+
+      .project-card::after {
+        position: absolute;
+        width: 150px;
+        aspect-ratio: 1;
+        top: -70px;
+        right: -55px;
+        border: 1px solid #d6bd8730;
+        border-radius: 50%;
+        content: "";
+        transition: transform 500ms ease;
+      }
+
+      .project-card:hover {
+        border-color: #d6bd8752;
+        background: rgba(255, 255, 255, 0.09);
+        transform: translateY(-7px);
+      }
+
+      .project-card:hover::after {
+        transform: scale(1.22);
+      }
+
+      .project-icon {
+        width: 52px;
+        aspect-ratio: 1;
+        border: 1px solid #d6bd8747;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: var(--gold-light);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 23px;
+        background: #ffffff08;
+      }
+
+      .project-card h3 {
+        margin: 28px 0 12px;
+        color: #fffaf0;
+        font-size: 25px;
+        font-weight: 600;
+      }
+
+      .project-card p {
+        margin: 0;
+        color: #c4cec6;
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .balance-wrap {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 180px 1fr;
+        align-items: stretch;
+        gap: 22px;
+      }
+
+      .balance-card {
+        padding: clamp(34px, 5vw, 56px);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        background: rgba(255, 253, 248, 0.76);
+        box-shadow: 0 18px 55px rgba(64, 54, 36, 0.07);
+        backdrop-filter: blur(10px);
+        transition: transform 250ms ease;
+      }
+
+      .balance-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .balance-card.external {
+        background:
+          radial-gradient(circle at 100% 0%, #9aaf9b35, transparent 40%),
+          rgba(255, 253, 248, 0.8);
+      }
+
+      .balance-card.internal {
+        background:
+          radial-gradient(circle at 0 0, #d9c2913d, transparent 40%),
+          rgba(255, 253, 248, 0.8);
+      }
+
+      .balance-card h3 {
+        margin: 0;
+        color: var(--green);
+        font-size: 34px;
+      }
+
+      .balance-card > p {
+        margin: 10px 0 28px;
+        color: var(--muted);
+      }
+
+      .balance-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .balance-list span {
+        padding: 13px 14px;
+        border-radius: 13px;
+        color: #4d5a52;
+        background: rgba(255, 255, 255, 0.66);
+        font-size: 14px;
+      }
+
+      .balance-list span::before {
+        margin-right: 8px;
+        color: var(--gold);
+        content: "·";
+        font-weight: 800;
+      }
+
+      .balance-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .balance-message {
+        width: 150px;
+        aspect-ratio: 1;
+        padding: 20px;
+        border: 1px solid #b593564f;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: var(--brown);
+        text-align: center;
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 16px;
+        line-height: 1.7;
+        background: var(--ivory);
+        box-shadow:
+          0 0 0 12px #f7f2e8,
+          0 0 0 13px #b593561f;
+      }
+
+      .membership {
+        overflow: hidden;
+      }
+
+      .membership::before {
+        position: absolute;
+        width: 440px;
+        aspect-ratio: 1;
+        top: -260px;
+        right: -180px;
+        border: 1px solid #d6bd8723;
+        border-radius: 50%;
+        content: "";
+        box-shadow:
+          0 0 0 60px #d6bd8708,
+          0 0 0 120px #d6bd8705;
+      }
+
+      .membership-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        align-items: center;
+        gap: clamp(60px, 9vw, 120px);
+      }
+
+      .membership-copy .section-label {
+        color: var(--gold-light);
+      }
+
+      .membership-copy h2 {
+        margin: 0;
+        color: #fffaf0;
+        font-size: clamp(38px, 5vw, 58px);
+        letter-spacing: -0.018em;
+        line-height: 1.28;
+      }
+
+      .membership-copy p {
+        margin: 26px 0 0;
+        color: #cbd3cc;
+        font-size: 17px;
+        line-height: 1.95;
+      }
+
+      .care-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .care-item {
+        min-height: 120px;
+        padding: 22px;
+        border: 1px solid #ffffff12;
+        border-radius: 18px;
+        background: #ffffff0a;
+        transition:
+          transform 220ms ease,
+          background 220ms ease;
+      }
+
+      .care-item:hover {
+        background: #ffffff12;
+        transform: translateY(-3px);
+      }
+
+      .care-item b {
+        display: block;
+        color: var(--gold-light);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 19px;
+      }
+
+      .care-item span {
+        display: block;
+        margin-top: 8px;
+        color: #b5c0b8;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .process {
+        counter-reset: step;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+      }
+
+      .process-step {
+        position: relative;
+        padding: 0 28px;
+        text-align: center;
+        counter-increment: step;
+      }
+
+      .process-step:not(:last-child)::after {
+        position: absolute;
+        width: calc(100% - 72px);
+        height: 1px;
+        top: 34px;
+        left: calc(50% + 36px);
+        content: "";
+        background: linear-gradient(90deg, var(--gold-light), transparent);
+      }
+
+      .step-number {
+        position: relative;
+        z-index: 2;
+        width: 68px;
+        aspect-ratio: 1;
+        margin: 0 auto;
+        border: 1px solid #b593564c;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: var(--brown);
+        background: var(--ivory-light);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 18px;
+        box-shadow: 0 10px 26px #4e422d0c;
+      }
+
+      .process-step h3 {
+        margin: 23px 0 8px;
+        color: var(--green);
+        font-size: 21px;
+      }
+
+      .process-step p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+
+      .value-card {
+        padding: 36px 26px;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        text-align: center;
+        background: rgba(255, 253, 248, 0.82);
+        transition:
+          transform 250ms ease,
+          box-shadow 250ms ease,
+          border-color 250ms ease;
+      }
+
+      .value-card:hover {
+        border-color: #b5935659;
+        box-shadow: 0 20px 46px #5b4c3212;
+        transform: translateY(-6px);
+      }
+
+      .value-symbol {
+        width: 58px;
+        aspect-ratio: 1;
+        margin: 0 auto;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        background: var(--green);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 24px;
+      }
+
+      .value-card h3 {
+        margin: 22px 0 10px;
+        color: var(--green);
+        font-size: 22px;
+      }
+
+      .value-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .contact {
+        background:
+          radial-gradient(circle at 6% 90%, #a9bca44a, transparent 27%),
+          var(--paper);
+      }
+
+      .manifesto {
+        overflow: hidden;
+        color: #fffaf0;
+        background:
+          radial-gradient(circle at 16% 22%, #8ca18d2b, transparent 28%),
+          radial-gradient(circle at 84% 78%, #b593561c, transparent 30%),
+          var(--green-deep);
+      }
+
+      .manifesto::before {
+        position: absolute;
+        width: 520px;
+        aspect-ratio: 1;
+        top: 50%;
+        left: 50%;
+        border: 1px solid #d6bd8729;
+        border-radius: 50%;
+        content: "";
+        box-shadow:
+          0 0 0 62px #d6bd8707,
+          0 0 0 124px #d6bd8704;
+        transform: translate(-50%, -50%);
+      }
+
+      .manifesto-inner {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .manifesto-mark {
+        width: 64px;
+        aspect-ratio: 1;
+        margin: 0 auto 28px;
+        border: 1px solid #d6bd8763;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: var(--gold-light);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 25px;
+      }
+
+      .manifesto h2 {
+        margin: 0;
+        color: #fffaf0;
+        font-size: clamp(36px, 5.4vw, 62px);
+        letter-spacing: -0.015em;
+        line-height: 1.45;
+      }
+
+      .manifesto h2 span {
+        color: var(--gold-light);
+      }
+
+      .manifesto p {
+        max-width: 760px;
+        margin: 28px auto 0;
+        color: #cbd4cd;
+        font-size: clamp(16px, 2vw, 19px);
+        line-height: 2;
+      }
+
+      .contact-panel {
+        margin-top: 24px;
+        padding: clamp(38px, 6vw, 68px);
+        border: 1px solid #ffffffa8;
+        border-radius: 32px;
+        display: grid;
+        grid-template-columns: 0.82fr 1.18fr;
+        gap: clamp(45px, 7vw, 90px);
+        background: rgba(255, 253, 248, 0.67);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(14px);
+      }
+
+      .contact-action {
+        display: block;
+      }
+
+      .contact-form {
+        display: grid;
+        gap: 12px;
+      }
+
+      .field {
+        width: 100%;
+        min-height: 50px;
+        padding: 0 17px;
+        border: 1px solid #766b561f;
+        border-radius: 13px;
+        outline: 0;
+        color: var(--ink);
+        background: #fffdf8cf;
+        transition:
+          border-color 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .field-message {
+        min-height: 122px;
+        padding: 15px 17px;
+        resize: vertical;
+        line-height: 1.7;
+      }
+
+      .field:focus {
+        border-color: #5f7b697d;
+        box-shadow: 0 0 0 4px #5f7b6912;
+      }
+
+      .qr {
+        text-align: center;
+      }
+
+      .qr-placeholder {
+        width: 150px;
+        aspect-ratio: 1;
+        padding: 14px;
+        border: 1px solid #766b5621;
+        border-radius: 16px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 3px;
+        background:
+          radial-gradient(circle at 50% 50%, #e8dcc4, transparent 68%),
+          #fffdf8;
+        box-shadow:
+          inset 0 0 0 5px #ffffffa6,
+          0 15px 35px #53462f12;
+      }
+
+      .qr-placeholder span {
+        border-radius: 1px;
+        background: #274c3c;
+        opacity: 0.08;
+      }
+
+      .qr-placeholder span:nth-child(3n + 1),
+      .qr-placeholder span:nth-child(5n),
+      .qr-placeholder span:nth-child(11n + 2) {
+        opacity: 1;
+      }
+
+      .qr p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .form-status {
+        min-height: 20px;
+        margin: 0;
+        color: var(--green);
+        font-size: 13px;
+      }
+
+      .reason-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .reason-card {
+        position: relative;
+        min-height: 250px;
+        padding: 35px;
+        border: 1px solid #ffffffc7;
+        border-radius: 25px;
+        overflow: hidden;
+        background:
+          linear-gradient(145deg, #fffdf8e8, #f5eddfc4);
+        box-shadow:
+          inset 0 1px 0 #fff,
+          0 20px 55px rgba(69, 57, 38, 0.07);
+        transition:
+          transform 260ms ease,
+          box-shadow 260ms ease,
+          border-color 260ms ease;
+      }
+
+      .reason-card:hover {
+        border-color: #b593564e;
+        box-shadow:
+          inset 0 1px 0 #fff,
+          0 25px 65px rgba(69, 57, 38, 0.12);
+        transform: translateY(-6px);
+      }
+
+      .reason-number {
+        color: var(--gold);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 13px;
+        letter-spacing: 0.15em;
+      }
+
+      .reason-card h3 {
+        margin: 38px 0 13px;
+        color: var(--green);
+        font-size: 27px;
+      }
+
+      .reason-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.9;
+      }
+
+      .audience {
+        overflow: hidden;
+      }
+
+      .audience::before {
+        position: absolute;
+        width: 460px;
+        aspect-ratio: 1;
+        right: -240px;
+        bottom: -260px;
+        border: 1px solid #b5935627;
+        border-radius: 50%;
+        content: "";
+        box-shadow:
+          0 0 0 55px #b5935607,
+          0 0 0 110px #b5935604;
+      }
+
+      .audience-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .audience-card {
+        min-height: 170px;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 21px;
+        display: flex;
+        align-items: flex-start;
+        gap: 17px;
+        background: rgba(255, 253, 248, 0.78);
+        transition:
+          transform 240ms ease,
+          border-color 240ms ease,
+          box-shadow 240ms ease;
+      }
+
+      .audience-card:hover {
+        border-color: #78927d72;
+        box-shadow: 0 18px 42px #455e4b12;
+        transform: translateY(-5px);
+      }
+
+      .audience-icon {
+        width: 42px;
+        aspect-ratio: 1;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        background: var(--green);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 18px;
+      }
+
+      .audience-card p {
+        margin: 2px 0 0;
+        color: #4e5b53;
+        font-size: 15px;
+        line-height: 1.75;
+      }
+
+      .first-visit {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 14px;
+      }
+
+      .visit-step {
+        position: relative;
+        min-height: 265px;
+        padding: 28px 24px;
+        border: 1px solid #ffffff14;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.055);
+        transition:
+          transform 230ms ease,
+          background 230ms ease;
+      }
+
+      .visit-step:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-5px);
+      }
+
+      .visit-step:not(:last-child)::after {
+        position: absolute;
+        z-index: 2;
+        width: 28px;
+        height: 1px;
+        top: 47px;
+        right: -21px;
+        content: "";
+        background: var(--gold-light);
+      }
+
+      .visit-index {
+        width: 40px;
+        aspect-ratio: 1;
+        border: 1px solid #d6bd8759;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: var(--gold-light);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+      }
+
+      .visit-step h3 {
+        margin: 30px 0 12px;
+        color: #fffaf0;
+        font-size: 22px;
+      }
+
+      .visit-step p {
+        margin: 0;
+        color: #c0cbc3;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .previsit-note {
+        margin-top: 22px;
+        padding: 22px 24px;
+        border: 1px solid #d6bd8730;
+        border-radius: 16px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: start;
+        gap: 18px;
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .previsit-note strong {
+        color: var(--gold-light);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 16px;
+      }
+
+      .previsit-list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 18px;
+        list-style: none;
+      }
+
+      .previsit-list li {
+        color: #c5cec7;
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      .previsit-list li::before {
+        margin-right: 7px;
+        color: var(--gold-light);
+        content: "·";
+      }
+
+      .cooperation {
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 8% 12%, #99ae9b38, transparent 28%),
+          radial-gradient(circle at 93% 92%, #d8bd8840, transparent 29%),
+          var(--paper);
+      }
+
+      .cooperation-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+      }
+
+      .cooperation-card {
+        min-height: 100%;
+        padding: clamp(30px, 4vw, 45px);
+        border: 1px solid #ffffffbf;
+        border-radius: 26px;
+        background: rgba(255, 253, 248, 0.7);
+        box-shadow: 0 18px 45px #57492f0d;
+        transition:
+          transform 240ms ease,
+          box-shadow 240ms ease;
+      }
+
+      .cooperation-card:hover {
+        box-shadow: 0 24px 58px #57492f18;
+        transform: translateY(-6px);
+      }
+
+      .cooperation-card span {
+        color: var(--gold);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 14px;
+      }
+
+      .cooperation-card h3 {
+        margin: 18px 0 20px;
+        color: var(--green);
+        font-size: 28px;
+      }
+
+      .partner-list {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 12px;
+        list-style: none;
+      }
+
+      .partner-list li {
+        position: relative;
+        padding: 13px 14px 13px 42px;
+        border: 1px solid #766b5615;
+        border-radius: 13px;
+        color: #4f5c54;
+        background: rgba(255, 255, 255, 0.52);
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .partner-list li::before {
+        position: absolute;
+        width: 20px;
+        aspect-ratio: 1;
+        top: 14px;
+        left: 13px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        content: "和";
+        background: var(--green);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 10px;
+      }
+
+      .partner-list-caution li::before {
+        color: var(--brown);
+        content: "止";
+        background: #d8c7a7;
+      }
+
+      .partner-statement {
+        max-width: 860px;
+        margin: -18px auto 42px;
+        padding: 26px 30px;
+        border-left: 3px solid var(--gold);
+        color: #526058;
+        background: rgba(255, 253, 248, 0.62);
+        font-size: 16px;
+        line-height: 2;
+      }
+
+      .cooperation-action {
+        margin-top: 36px;
+        text-align: center;
+      }
+
+      .faq {
+        margin-top: 28px;
+        padding: 25px 28px;
+        border: 1px solid #ffffffbf;
+        border-radius: 20px;
+        background: rgba(255, 253, 248, 0.68);
+      }
+
+      .faq h3 {
+        margin: 0;
+        color: var(--green);
+        font-size: 18px;
+      }
+
+      .faq p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.85;
+      }
+
+      .faq-item + .faq-item {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+      }
+
+      .contact-path-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .contact-entry {
+        min-height: 230px;
+        padding: 27px;
+        border: 1px solid #ffffffc2;
+        border-radius: 22px;
+        text-align: left;
+        color: inherit;
+        background: rgba(255, 253, 248, 0.72);
+        box-shadow: 0 15px 38px #594b3210;
+        cursor: pointer;
+        transition:
+          transform 230ms ease,
+          border-color 230ms ease,
+          box-shadow 230ms ease,
+          background 230ms ease;
+      }
+
+      .contact-entry:hover,
+      .contact-entry.selected {
+        border-color: #78927d66;
+        background: rgba(255, 253, 248, 0.94);
+        box-shadow: 0 20px 48px #455e4b17;
+        transform: translateY(-4px);
+      }
+
+      .contact-entry i {
+        width: 40px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        background: var(--green);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-style: normal;
+      }
+
+      .contact-entry b {
+        margin-top: 20px;
+        display: block;
+        color: var(--green);
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 21px;
+      }
+
+      .contact-entry span {
+        margin-top: 10px;
+        display: block;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .contact-entry small {
+        margin-top: 14px;
+        display: block;
+        color: var(--brown);
+        font-size: 12px;
+        line-height: 1.6;
+      }
+
+      .contact-support h3 {
+        margin: 0 0 20px;
+        color: var(--green);
+        font-size: 25px;
+      }
+
+      .contact-info-list {
+        display: grid;
+        gap: 9px;
+      }
+
+      .contact-info-row {
+        padding: 12px 14px;
+        border: 1px solid #766b5615;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        background: rgba(255, 253, 248, 0.6);
+      }
+
+      .contact-info-row span {
+        color: #5d6861;
+        font-size: 13px;
+      }
+
+      .contact-info-row strong {
+        color: var(--brown);
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .contact-support-bottom {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .contact-support-note {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.75;
+      }
+
+      .action-dock {
+        position: fixed;
+        z-index: 45;
+        right: 18px;
+        bottom: 18px;
+        padding: 5px;
+        border: 1px solid #ffffffba;
+        border-radius: 999px;
+        display: flex;
+        gap: 6px;
+        background: rgba(255, 253, 248, 0.76);
+        box-shadow: 0 12px 36px rgba(55, 47, 33, 0.13);
+        backdrop-filter: blur(18px);
+        transform: translateY(120px);
+        transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .action-dock.visible {
+        transform: translateY(0);
+      }
+
+      .action-dock a {
+        min-height: 36px;
+        padding: 0 14px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        color: var(--green);
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .action-dock a:first-child {
+        color: #fff;
+        background: var(--green);
+      }
+
+      .site-footer {
+        padding: 48px 0 28px;
+        color: #bcc7bf;
+        background: #17382d;
+      }
+
+      .footer-main {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 30px;
+        padding-bottom: 35px;
+      }
+
+      .footer-brand strong {
+        color: #fffaf0;
+        font-family: "Songti SC", "STSong", "SimSun", "PingFang SC", "Microsoft YaHei", serif;
+        font-size: 25px;
+        letter-spacing: 0.1em;
+      }
+
+      .footer-brand p {
+        margin: 10px 0 0;
+        color: #bfc9c1;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 22px;
+      }
+
+      .footer-links a {
+        color: #cbd3cc;
+        font-size: 13px;
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: var(--gold-light);
+      }
+
+      .footer-bottom {
+        padding-top: 22px;
+        border-top: 1px solid #ffffff12;
+        color: #92a398;
+        font-size: 12px;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(38px);
+        transition:
+          opacity 800ms cubic-bezier(0.16, 1, 0.3, 1),
+          transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .delay-1 {
+        transition-delay: 90ms;
+      }
+
+      .delay-2 {
+        transition-delay: 180ms;
+      }
+
+      .delay-3 {
+        transition-delay: 270ms;
+      }
+
+      @keyframes breathe {
+        0%,
+        100% {
+          transform: translateY(0) scale(1);
+        }
+        50% {
+          transform: translateY(-9px) scale(1.015);
+        }
+      }
+
+      @keyframes slow-turn {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (max-width: 1080px) {
+        .nav-links {
+          gap: 16px;
+        }
+
+        .nav-links a {
+          font-size: 13px;
+        }
+
+        .projects-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .values-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .first-visit {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .visit-step:not(:last-child)::after {
+          display: none;
+        }
+
+        .cooperation-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          width: min(100% - 36px, 720px);
+        }
+
+        .menu-button {
+          display: grid;
+        }
+
+        .nav-links {
+          position: fixed;
+          top: 76px;
+          right: 18px;
+          left: 18px;
+          padding: 18px;
+          border: 1px solid var(--line);
+          border-radius: 20px;
+          display: grid;
+          gap: 0;
+          visibility: hidden;
+          opacity: 0;
+          background: rgba(255, 253, 248, 0.97);
+          box-shadow: var(--shadow);
+          transform: translateY(-12px);
+          transition:
+            opacity 200ms ease,
+            visibility 200ms ease,
+            transform 200ms ease;
+          backdrop-filter: blur(18px);
+        }
+
+        .nav-links.open {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .nav-links a {
+          padding: 13px 12px;
+          border-bottom: 1px solid var(--line);
+          font-size: 15px;
+        }
+
+        .nav-links a::after {
+          display: none;
+        }
+
+        .nav-appointment {
+          display: none;
+        }
+
+        .hero {
+          min-height: auto;
+          padding: 130px 0 80px;
+        }
+
+        .hero-grid,
+        .about-grid,
+        .membership-grid,
+        .contact-panel {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-copy {
+          text-align: center;
+        }
+
+        .eyebrow {
+          justify-content: center;
+        }
+
+        .hero-description {
+          margin-inline: auto;
+        }
+
+        .hero-actions,
+        .hero-note {
+          justify-content: center;
+        }
+
+        .hero-visual {
+          min-height: 500px;
+        }
+
+        .trust-strip {
+          margin-top: -25px;
+        }
+
+        .trust-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .trust-card:nth-child(2) {
+          border-right: 0;
+        }
+
+        .trust-card:nth-child(-n + 2) {
+          border-bottom: 1px solid var(--line);
+        }
+
+        .about-emblem {
+          margin-inline: auto;
+        }
+
+        .balance-wrap {
+          grid-template-columns: 1fr;
+        }
+
+        .balance-center {
+          min-height: 130px;
+        }
+
+        .balance-message {
+          transform: rotate(0);
+        }
+
+        .audience-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .strategy-card:nth-child(-n + 2),
+        .strategy-card:nth-child(n + 3) {
+          grid-column: span 3;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          width: min(100% - 28px, 520px);
+        }
+
+        .section {
+          padding: 82px 0;
+        }
+
+        h1 {
+          font-size: clamp(38px, 11vw, 50px);
+          line-height: 1.22;
+        }
+
+        .section-heading h2,
+        .split-copy h2,
+        .membership-copy h2 {
+          font-size: clamp(31px, 9vw, 39px);
+          line-height: 1.3;
+        }
+
+        .section-heading {
+          margin-bottom: 38px;
+        }
+
+        .hero-description {
+          font-size: 16px;
+          line-height: 1.8;
+        }
+
+        .hero-actions .button {
+          width: 100%;
+        }
+
+        .hero-visual {
+          min-height: 390px;
+        }
+
+        .hero-landscape {
+          opacity: 0.7;
+        }
+
+        .mountain {
+          width: 110%;
+        }
+
+        .meridian-line {
+          right: -55%;
+        }
+
+        .trust-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .trust-card {
+          min-height: 92px;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .trust-card:nth-child(3) {
+          border-bottom: 1px solid var(--line);
+        }
+
+        .trust-card:last-child {
+          border-bottom: 0;
+        }
+
+        .health-orbit {
+          width: min(330px, 90vw);
+        }
+
+        .orbit-center {
+          width: 116px;
+        }
+
+        .orbit-center strong {
+          font-size: 28px;
+        }
+
+        .orbit-item {
+          width: 70px;
+        }
+
+        .orbit-item i {
+          font-size: 19px;
+        }
+
+        .projects-grid,
+        .values-grid,
+        .care-grid,
+        .reason-grid,
+        .audience-grid,
+        .first-visit,
+        .cooperation-grid,
+        .contact-path-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-entry {
+          min-height: 0;
+        }
+
+        .strategy-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .strategy-card:nth-child(-n + 2),
+        .strategy-card:nth-child(n + 3) {
+          min-height: 0;
+          grid-column: auto;
+        }
+
+        .strategy-card {
+          padding: 23px 22px;
+        }
+
+        .strategy-card-featured .strategy-core {
+          font-size: 27px;
+        }
+
+        .strategy-declaration {
+          padding: 17px 19px;
+          font-size: 16px;
+        }
+
+        .balance-list {
+          grid-template-columns: 1fr;
+        }
+
+        .process {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .process-step {
+          display: grid;
+          grid-template-columns: 58px 1fr;
+          column-gap: 18px;
+          padding: 0;
+          text-align: left;
+        }
+
+        .process-step:not(:last-child)::after {
+          width: 1px;
+          height: calc(100% - 26px);
+          top: 58px;
+          left: 29px;
+          background: linear-gradient(var(--gold-light), transparent);
+        }
+
+        .step-number {
+          width: 58px;
+          grid-row: span 2;
+        }
+
+        .process-step h3 {
+          margin: 5px 0 4px;
+        }
+
+        .field {
+          min-height: 54px;
+          font-size: 16px;
+        }
+
+        .qr {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          text-align: left;
+        }
+
+        .contact-support-bottom {
+          display: block;
+        }
+
+        .contact-support-note {
+          margin-top: 14px;
+        }
+
+        .qr-placeholder {
+          width: 120px;
+          flex: 0 0 auto;
+        }
+
+        .footer-main {
+          flex-direction: column;
+        }
+
+        .footer-links {
+          justify-content: flex-start;
+        }
+
+        .action-dock {
+          right: 0;
+          bottom: 0;
+          left: 0;
+          padding: 7px 12px calc(7px + env(safe-area-inset-bottom));
+          border: 0;
+          border-top: 1px solid var(--line);
+          border-radius: 0;
+          justify-content: stretch;
+          background: rgba(255, 253, 248, 0.94);
+        }
+
+        .action-dock a {
+          min-height: 38px;
+          flex: 1;
+          justify-content: center;
+        }
+
+        .site-footer {
+          padding-bottom: 76px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" id="site-header">
+      <nav class="nav container" aria-label="主导航">
+        <a class="logo" href="#home" aria-label="亿柒首页">
+          <span class="logo-seal">亿柒</span>
+          <span class="logo-copy">
+            <span class="logo-name">亿柒</span>
+            <span class="logo-tagline">内调外养 · 内外兼修</span>
+          </span>
+        </a>
+
+        <div class="nav-links" id="nav-links">
+          <a class="active" href="#home">首页</a>
+          <a href="#about">关于亿柒</a>
+          <a href="#projects">核心项目</a>
+          <a href="#balance">内调外养</a>
+          <a href="#service">门店服务</a>
+          <a href="#membership">会员体系</a>
+          <a href="#cooperation">事业同行</a>
+          <a href="#contact">联系我们</a>
+        </div>
+
+        <a
+          class="button button-primary nav-appointment"
+          href="#contact"
+          data-intent="体验"
+        >
+          立即预约
+        </a>
+        <button
+          class="menu-button"
+          id="menu-button"
+          type="button"
+          aria-label="打开导航菜单"
+          aria-expanded="false"
+        >
+          <span class="menu-icon"></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-landscape" aria-hidden="true">
+          <span class="mountain mountain-back"></span>
+          <span class="mountain"></span>
+          <span class="meridian-line"></span>
+          <span class="herb-stem"></span>
+        </div>
+        <div class="hero-grid container">
+          <div class="hero-copy reveal visible">
+            <p class="eyebrow">内调外养 · 内外兼修</p>
+            <h1>弘扬中医文化，<br />守护中老年健康</h1>
+            <p class="hero-description">
+              亿柒以“内调外养，内外兼修”为核心理念，面向50岁以上新老人，提供门店体验、健康管理、会员陪伴与长期调理建议，让健康从一次体验走向持续改善。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact" data-intent="体验"
+                >预约到店体验</a
+              >
+              <a class="button button-ghost" href="#balance">了解内调外养</a>
+              <a class="button button-ghost" href="#cooperation">了解同行计划</a>
+            </div>
+            <p class="hero-note">
+              <span></span>
+              专业服务 · 长期陪伴 · 健康管理
+            </p>
+          </div>
+
+          <div class="hero-visual reveal delay-2" aria-label="亿柒内调外养理念图">
+            <span class="leaf leaf-one"></span>
+            <span class="leaf leaf-two"></span>
+            <div class="health-orbit">
+              <div class="orbit-center">
+                <strong>亿柒</strong>
+                <small>健康管理</small>
+              </div>
+              <div class="orbit-item"><i>养</i><span>外养</span></div>
+              <div class="orbit-item"><i>调</i><span>内调</span></div>
+              <div class="orbit-item"><i>和</i><span>身心</span></div>
+              <div class="orbit-item"><i>伴</i><span>长期</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="亿柒信任背书">
+        <div class="trust-grid container reveal">
+          <article class="trust-card">
+            <span>服务对象</span>
+            <strong>50岁以上新老人</strong>
+          </article>
+          <article class="trust-card">
+            <span>核心理念</span>
+            <strong>内调外养</strong>
+          </article>
+          <article class="trust-card">
+            <span>服务方式</span>
+            <strong>门店体验 + 长期陪伴</strong>
+          </article>
+          <article class="trust-card">
+            <span>发展方向</span>
+            <strong>实效健康管理平台</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="about">
+        <div class="about-grid container">
+          <div class="about-emblem reveal">
+            <span class="emblem-word">亿柒</span>
+          </div>
+          <div class="split-copy reveal delay-1">
+            <p class="section-label">关于亿柒</p>
+            <h2>亿柒是谁？</h2>
+            <p>
+              中国正迎来充满活力的“新老人”时代。越来越多50岁以上人群，不只关注身体感受，也追求更主动、更有品质的生活方式。亿柒因此而生——希望让传统中医养生智慧，以更专业、更温暖、更容易坚持的方式融入日常。
+            </p>
+            <p>
+              我们强调实效健康，是因为信任来自真实可感的服务体验；我们选择长期陪伴，是因为健康从来不是一次消费，而是需要时间、专业与耐心共同守护的生活方式。
+            </p>
+            <div class="principles">
+              <span>传统养生智慧</span>
+              <span>标准化服务</span>
+              <span>长期健康陪伴</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section strategy" id="strategy">
+        <div class="container">
+          <header class="section-heading reveal">
+            <p class="section-label">品牌战略</p>
+            <h2>亿柒战略体系</h2>
+            <p>
+              以实效健康为方向，以长期主义为根基，服务7亿新老人。
+            </p>
+          </header>
+
+          <div class="strategy-grid">
+            <article class="strategy-card strategy-card-featured reveal">
+              <div class="strategy-topline">
+                <h3>愿景</h3>
+                <span class="strategy-index">壹</span>
+              </div>
+              <p class="strategy-core">服务7亿新老人</p>
+              <p class="strategy-explain">
+                关注规模庞大的新老人群体，让有品质的健康服务走进更多家庭。
+              </p>
+            </article>
+
+            <article
+              class="strategy-card strategy-card-featured reveal delay-1"
+            >
+              <div class="strategy-topline">
+                <h3>使命</h3>
+                <span class="strategy-index">贰</span>
+              </div>
+              <p class="strategy-core">让实效健康改变世界</p>
+              <p class="strategy-explain">
+                坚持以真实体验和长期价值，让健康管理带来切实可感的改变。
+              </p>
+            </article>
+
+            <article class="strategy-card reveal">
+              <div class="strategy-topline">
+                <h3>价值观</h3>
+                <span class="strategy-index">叁</span>
+              </div>
+              <p class="strategy-core">诚信为本，实效第一</p>
+              <p class="strategy-explain">
+                以诚信赢得信任，以实际服务体验检验每一次承诺。
+              </p>
+            </article>
+
+            <article class="strategy-card reveal delay-1">
+              <div class="strategy-topline">
+                <h3>战略定位</h3>
+                <span class="strategy-index">肆</span>
+              </div>
+              <p class="strategy-core">世界级实效健康管理平台</p>
+              <p class="strategy-explain">
+                整合服务、产品与会员体系，建设专业可信赖的健康管理平台。
+              </p>
+            </article>
+
+            <article class="strategy-card reveal delay-2">
+              <div class="strategy-topline">
+                <h3>战略路径</h3>
+                <span class="strategy-index">伍</span>
+              </div>
+              <p class="strategy-core">价值创新</p>
+              <p class="strategy-explain">
+                持续创新服务价值，为用户、门店与事业伙伴创造长期共赢。
+              </p>
+            </article>
+          </div>
+          <p class="strategy-declaration reveal">
+            亿柒以直营体系为根基，以实效健康为方向，以长期主义服务7亿新老人。
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="why-yiqi">
+        <div class="container">
+          <header class="section-heading reveal">
+            <p class="section-label">选择亿柒</p>
+            <h2>
+              为什么越来越多新老人<span class="title-keep">需要亿柒？</span>
+            </h2>
+            <p>
+              健康需求正在从单次体验走向持续管理，亿柒以专业、实效与陪伴回应这份变化。
+            </p>
+          </header>
+          <div class="reason-grid">
+            <article class="reason-card reveal">
+              <span class="reason-number">01</span>
+              <h3>健康需求正在变化</h3>
+              <p>
+                新老人不只追求少生病，更重视精力、体感、睡眠、行动力和生活质量。
+              </p>
+            </article>
+            <article class="reason-card reveal delay-1">
+              <span class="reason-number">02</span>
+              <h3>单次服务不够</h3>
+              <p>
+                健康管理不是一次体验，而是持续记录、持续跟进、持续陪伴。
+              </p>
+            </article>
+            <article class="reason-card reveal">
+              <span class="reason-number">03</span>
+              <h3>信任来自实效</h3>
+              <p>
+                亿柒坚持诚信为本、实效第一，用真实体感和长期服务建立信任。
+              </p>
+            </article>
+            <article class="reason-card reveal delay-1">
+              <span class="reason-number">04</span>
+              <h3>门店需要标准化</h3>
+              <p>
+                亿柒通过标准流程、专业手法、会员体系和数字化工具，让服务更稳定、更可复制。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-green" id="projects">
+        <div class="container">
+          <header class="section-heading reveal">
+            <p class="section-label">核心项目</p>
+            <h2>循古法之理，养身心之和</h2>
+            <p>
+              围绕中老年人的日常养生需求，提供舒缓、放松、调理体感的门店服务。
+            </p>
+          </header>
+          <div class="projects-grid">
+            <article class="project-card reveal">
+              <span class="project-icon">足</span>
+              <h3>足疗</h3>
+              <p>以细致手法舒缓足部紧绷感，在温润体验中卸下一日疲惫。</p>
+            </article>
+            <article class="project-card reveal delay-1">
+              <span class="project-icon">头</span>
+              <h3>头疗</h3>
+              <p>以温和节奏放松头颈区域，帮助舒缓压力，感受身心安宁。</p>
+            </article>
+            <article class="project-card reveal delay-2">
+              <span class="project-icon">艾</span>
+              <h3>艾灸</h3>
+              <p>借助艾草温热特性进行日常养护，带来温暖舒适的身体感受。</p>
+            </article>
+            <article class="project-card reveal">
+              <span class="project-icon">泥</span>
+              <h3>泥灸</h3>
+              <p>以温热敷养方式带来持续暖意，为日常祛湿排寒提供舒适体验。</p>
+            </article>
+            <article class="project-card reveal delay-1">
+              <span class="project-icon">蜡</span>
+              <h3>蜂蜡疗法</h3>
+              <p>利用蜂蜡温润包裹感进行局部养护，让身体在暖意中逐渐放松。</p>
+            </article>
+            <article class="project-card reveal delay-2">
+              <span class="project-icon">络</span>
+              <h3>经络推拿</h3>
+              <p>通过规范手法舒展身体、放松肌肉，帮助改善日常疲劳体感。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="balance">
+        <div class="container">
+          <header class="section-heading reveal">
+            <p class="section-label">内调外养</p>
+            <h2>从一次舒适体验，到长期健康管理</h2>
+            <p>外养关注当下感受，内调着眼长期营养与生活方式支持。</p>
+          </header>
+          <div class="balance-wrap">
+            <article class="balance-card external reveal">
+              <h3>外养</h3>
+              <p>通过门店项目与专业服务，帮助舒缓身心、改善体感。</p>
+              <div class="balance-list">
+                <span>经络疏通</span>
+                <span>祛湿排寒</span>
+                <span>缓解疲劳</span>
+                <span>改善体感</span>
+              </div>
+            </article>
+
+            <div class="balance-center reveal delay-1">
+              <p class="balance-message">
+                外养建立信任<br />内调形成长期<br />健康管理
+              </p>
+            </div>
+
+            <article class="balance-card internal reveal delay-2">
+              <h3>内调</h3>
+              <p>结合个体需求，提供多样化营养补充与日常滋养选择。</p>
+              <div class="balance-list">
+                <span>营养补充</span>
+                <span>免疫支持</span>
+                <span>肠道调理</span>
+                <span>长期滋养</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft audience" id="audience">
+        <div class="container">
+          <header class="section-heading reveal">
+            <p class="section-label">适合人群</p>
+            <h2>亿柒适合<span class="title-keep">哪些人？</span></h2>
+            <p>
+              亿柒面向重视日常养生与长期健康管理的人群，提供温和、有序的服务支持。
+            </p>
+          </header>
+          <div class="audience-grid">
+            <article class="audience-card reveal">
+              <span class="audience-icon">龄</span>
+              <p>50岁以上关注健康管理的新老人</p>
+            </article>
+            <article class="audience-card reveal delay-1">
+              <span class="audience-icon">息</span>
+              <p>长期感觉疲劳、睡眠质量下降的人群</p>
+            </article>
+            <article class="audience-card reveal delay-2">
+              <span class="audience-icon">养</span>
+              <p>重视养生、愿意长期调理的人群</p>
+            </article>
+            <article class="audience-card reveal">
+              <span class="audience-icon">舒</span>
+              <p>希望通过外养项目改善体感的人群</p>
+            </article>
+            <article class="audience-card reveal delay-1">
+              <span class="audience-icon">营</span>
+              <p>关注营养补充和生活方式管理的人群</p>
+            </article>
+            <article class="audience-card reveal delay-2">
+              <span class="audience-icon">伴</span>
+              <p>希望有人长期提醒、陪伴和回访的人群</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-green membership" id="membership">
+        <div class="membership-grid container">
+          <div class="membership-copy reveal">
+            <p class="section-label">会员体系</p>
+            <h2>一次体验不是结束，<br />而是长期陪伴的开始</h2>
+            <p>
+              亿柒通过会员档案、健康记录、定期回访、生日关怀、复购提醒、个性化服务建议，为中老年人建立长期健康陪伴体系。
+            </p>
+          </div>
+          <div class="care-grid">
+            <div class="care-item reveal">
+              <b>会员档案</b><span>记录个人偏好与服务信息</span>
+            </div>
+            <div class="care-item reveal delay-1">
+              <b>健康记录</b><span>持续关注日常体感变化</span>
+            </div>
+            <div class="care-item reveal">
+              <b>定期回访</b><span>让每一次服务都有后续</span>
+            </div>
+            <div class="care-item reveal delay-1">
+              <b>生日关怀</b><span>用温度建立真诚连接</span>
+            </div>
+            <div class="care-item reveal">
+              <b>复购提醒</b><span>协助形成有序养生习惯</span>
+            </div>
+            <div class="care-item reveal delay-1">
+              <b>个性建议</b><span>提供贴合需求的服务参考</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="service">
+        <div class="container">
+          <header class="section-heading reveal">
+            <p class="section-label">门店服务流程</p>
+            <h2>用标准流程，传递真诚与安心</h2>
+            <p>从进店到离店，再到后续关怀，每一步都有章法、有温度。</p>
+          </header>
+          <div class="process">
+            <article class="process-step reveal">
+              <span class="step-number">壹</span>
+              <h3>进店接待</h3>
+              <p>亲切问候，了解来店需求。</p>
+            </article>
+            <article class="process-step reveal delay-1">
+              <span class="step-number">贰</span>
+              <h3>体质了解</h3>
+              <p>沟通生活习惯与日常体感。</p>
+            </article>
+            <article class="process-step reveal delay-2">
+              <span class="step-number">叁</span>
+              <h3>项目体验</h3>
+              <p>匹配项目，提供规范服务。</p>
+            </article>
+            <article class="process-step reveal delay-3">
+              <span class="step-number">肆</span>
+              <h3>回访跟进</h3>
+              <p>关注感受，提供持续陪伴。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-green" id="first-visit">
+        <div class="container">
+          <header class="section-heading reveal">
+            <p class="section-label">首次到店体验</p>
+            <h2>
+              第一次到亿柒，<span class="title-keep">您会经历什么？</span>
+            </h2>
+            <p>
+              从预约到回访，我们用清晰流程降低陌生感，让每一次体验更安心。
+            </p>
+          </header>
+          <div class="first-visit">
+            <article class="visit-step reveal">
+              <span class="visit-index">壹</span>
+              <h3>预约咨询</h3>
+              <p>了解基本需求，安排合适到店时间。</p>
+            </article>
+            <article class="visit-step reveal delay-1">
+              <span class="visit-index">贰</span>
+              <h3>到店接待</h3>
+              <p>由工作人员进行基础沟通和服务介绍。</p>
+            </article>
+            <article class="visit-step reveal delay-2">
+              <span class="visit-index">叁</span>
+              <h3>体质了解</h3>
+              <p>了解睡眠、饮食、疲劳、生活习惯等基础情况。</p>
+            </article>
+            <article class="visit-step reveal delay-3">
+              <span class="visit-index">肆</span>
+              <h3>项目体验</h3>
+              <p>根据需求体验足疗、头疗、艾灸、泥灸等外养项目。</p>
+            </article>
+            <article class="visit-step reveal delay-3">
+              <span class="visit-index">伍</span>
+              <h3>回访跟进</h3>
+              <p>记录反馈，持续提供适合的健康管理建议。</p>
+            </article>
+          </div>
+          <aside class="previsit-note reveal">
+            <strong>预约前，您可以先简单了解：</strong>
+            <ul class="previsit-list">
+              <li>自己主要想改善哪类体感</li>
+              <li>最近睡眠、疲劳、饮食和生活习惯变化</li>
+              <li>想体验哪类外养项目</li>
+              <li>是否希望后续有人持续回访提醒</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section-heading reveal">
+            <p class="section-label">品牌价值</p>
+            <h2>做好每一次服务，珍惜每一份信任</h2>
+          </header>
+          <div class="values-grid">
+            <article class="value-card reveal">
+              <span class="value-symbol">专</span>
+              <h3>专业手法</h3>
+              <p>注重人员培训与实操规范，用专业带来安心体验。</p>
+            </article>
+            <article class="value-card reveal delay-1">
+              <span class="value-symbol">标</span>
+              <h3>标准流程</h3>
+              <p>建立清晰服务标准，让每家门店保持稳定品质。</p>
+            </article>
+            <article class="value-card reveal delay-2">
+              <span class="value-symbol">诚</span>
+              <h3>真诚服务</h3>
+              <p>尊重每位长者的感受，以耐心和温度做好服务。</p>
+            </article>
+            <article class="value-card reveal delay-3">
+              <span class="value-symbol">伴</span>
+              <h3>长期陪伴</h3>
+              <p>不止一次体验，更关注长期关系与健康生活习惯。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section manifesto" aria-label="亿柒品牌宣言">
+        <div class="manifesto-inner container reveal">
+          <span class="manifesto-mark">柒</span>
+          <h2>
+            健康，不只是一次体验。<br />
+            <span>健康，是一种长期陪伴。</span>
+          </h2>
+          <p>
+            亿柒相信，真正的实效健康，来自专业、诚信、坚持与时间。<br />
+            我们愿以中医养生智慧，陪伴更多新老人，活得更轻松、更自在、更有价值。
+          </p>
+        </div>
+      </section>
+
+      <section class="section cooperation" id="cooperation">
+        <div class="container">
+          <header class="section-heading reveal">
+            <p class="section-label">事业同行</p>
+            <h2>同心同德，才能同行</h2>
+            <p>
+              亿柒现阶段坚持直营体系建设，不开放外部经营授权。我们寻找的不是短期逐利者，而是认同实效健康、诚信服务、长期主义，愿意一起服务7亿新老人的事业伙伴。
+            </p>
+          </header>
+          <div class="partner-statement reveal">
+            亿柒相信，真正的健康事业，不能靠短期扩张做大，而要靠长期主义做稳。现阶段，亿柒坚持直营体系建设，把标准、服务、人才、产品、会员管理和健康陪伴体系打磨扎实。我们只寻找价值观一致、愿意长期同行、愿意在一线服务新老人的事业伙伴。
+          </div>
+          <div class="cooperation-grid">
+            <article class="cooperation-card reveal">
+              <span>我们期待这样的伙伴</span>
+              <h3>适合同行的人</h3>
+              <ul class="partner-list">
+                <li>认同“诚信为本，实效第一”</li>
+                <li>认同长期主义，不追求短期高回报</li>
+                <li>愿意深耕健康服务行业</li>
+                <li>愿意从一线服务做起</li>
+                <li>愿意接受标准化训练</li>
+                <li>愿意与亿柒共同服务7亿新老人</li>
+              </ul>
+            </article>
+            <article class="cooperation-card reveal delay-1">
+              <span>长期事业需要共同坚守</span>
+              <h3>不适合同行的人</h3>
+              <ul class="partner-list partner-list-caution">
+                <li>只想快速赚钱</li>
+                <li>只想拿项目变现</li>
+                <li>不重视服务质量</li>
+                <li>不愿意遵守标准流程</li>
+                <li>不愿意长期深耕用户</li>
+              </ul>
+            </article>
+          </div>
+          <div class="faq reveal">
+            <div class="faq-item">
+              <h3>
+                问：亿柒目前采用<span class="title-keep">什么发展模式？</span>
+              </h3>
+              <p>
+                答：现阶段亿柒只做直营体系建设。我们更重视标准化、服务质量、人才培养和长期用户陪伴。如果您认同亿柒理念，可以通过“事业同行”入口与我们联系。
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>问：提交信息后多久会有人联系？</h3>
+              <p>
+                答：目前官网表单为前端预约入口，正式联系信息完善后，亿柒工作人员会根据咨询类型尽快联系您。
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>问：事业同行是不是加盟？</h3>
+              <p>
+                答：不是。亿柒现阶段不做招商、不做加盟，只做直营体系建设。事业同行指的是认同亿柒价值观、愿意长期参与直营体系建设的人。
+              </p>
+            </div>
+          </div>
+          <div class="cooperation-action reveal">
+            <a class="button button-primary" href="#contact" data-intent="同行"
+              >了解同行计划</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="container">
+          <header class="section-heading reveal">
+            <p class="section-label">联系我们</p>
+            <h2>选择适合您的联系入口</h2>
+            <p>
+              预约体验、事业同行或资源协同，请选择对应入口并留下信息。
+            </p>
+          </header>
+
+          <div class="contact-path-grid">
+            <button
+              class="contact-entry reveal selected"
+              type="button"
+              data-intent="体验"
+            >
+              <i>体</i>
+              <b>预约一次到店体验</b>
+              <span
+                >适合想了解亿柒服务、体验足疗、头疗、艾灸、泥灸等外养项目的用户。</span
+              >
+              <small
+                >填写姓名、电话和所在城市，亿柒工作人员会尽快联系您。</small
+              >
+            </button>
+            <button
+              class="contact-entry reveal delay-1"
+              type="button"
+              data-intent="同行"
+            >
+              <i>同</i>
+              <b>了解事业同行计划</b>
+              <span
+                >适合认同亿柒理念、愿意长期参与直营体系建设、愿意从一线服务开始共同成长的人。</span
+              >
+              <small
+                >请留下您的基本信息、所在城市和过往经历，我们会进行初步沟通。</small
+              >
+            </button>
+            <button
+              class="contact-entry reveal delay-2"
+              type="button"
+              data-intent="合作"
+            >
+              <i>合</i>
+              <b>咨询资源协同合作</b>
+              <span
+                >适合在产品、内容、健康服务、数字化系统、供应链等方面希望与亿柒协同的机构或个人。</span
+              >
+              <small>请说明您的合作方向，方便我们判断是否匹配。</small>
+            </button>
+          </div>
+
+          <div class="contact-panel">
+            <div class="contact-support reveal">
+              <h3>联系信息</h3>
+              <div class="contact-info-list">
+                <div class="contact-info-row">
+                  <span>品牌微信</span><strong>待正式公布</strong>
+                </div>
+                <div class="contact-info-row">
+                  <span>联系电话</span><strong>待正式公布</strong>
+                </div>
+                <div class="contact-info-row">
+                  <span>门店地址</span><strong>筹备中</strong>
+                </div>
+                <div class="contact-info-row">
+                  <span>服务时间</span><strong>待完善</strong>
+                </div>
+                <div class="contact-info-row">
+                  <span>公众号／视频号</span><strong>即将完善</strong>
+                </div>
+              </div>
+              <div class="contact-support-bottom">
+                <div class="qr">
+                  <div class="qr-placeholder" aria-label="官方二维码占位">
+                    <span></span><span></span><span></span><span></span
+                    ><span></span><span></span><span></span><span></span
+                    ><span></span><span></span><span></span><span></span
+                    ><span></span><span></span><span></span><span></span
+                    ><span></span><span></span><span></span><span></span
+                    ><span></span><span></span><span></span><span></span
+                    ><span></span><span></span><span></span><span></span
+                    ><span></span><span></span><span></span><span></span
+                    ><span></span><span></span><span></span><span></span
+                    ><span></span><span></span><span></span><span></span
+                    ><span></span><span></span><span></span><span></span
+                    ><span></span><span></span><span></span><span></span
+                    ><span></span>
+                  </div>
+                  <p>扫码关注亿柒官方信息</p>
+                </div>
+                <p class="contact-support-note">
+                  公众号／视频号二维码待完善，正式信息将在确认后统一公布。
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-action reveal delay-1">
+              <form class="contact-form" id="contact-form">
+                <input
+                  class="field"
+                  type="text"
+                  name="name"
+                  placeholder="姓名"
+                  aria-label="姓名"
+                  required
+                />
+                <input
+                  class="field"
+                  type="tel"
+                  name="phone"
+                  placeholder="手机号"
+                  aria-label="手机号"
+                  required
+                />
+                <input
+                  class="field"
+                  type="text"
+                  name="city"
+                  placeholder="所在城市"
+                  aria-label="所在城市"
+                  required
+                />
+                <select
+                  class="field"
+                  id="intent-select"
+                  name="intent"
+                  aria-label="咨询类型"
+                >
+                  <option value="体验">预约体验</option>
+                  <option value="同行">事业同行</option>
+                  <option value="合作">合作咨询</option>
+                </select>
+                <textarea
+                  class="field field-message"
+                  name="message"
+                  placeholder="请简单说明您的需求，例如：想预约体验、想了解事业同行、想咨询合作方向等。"
+                  aria-label="留言内容"
+                  required
+                ></textarea>
+                <button class="button button-primary" type="submit">
+                  提交咨询
+                </button>
+                <p class="form-status" id="form-status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="action-dock" id="action-dock" aria-label="快捷行动">
+      <a href="#contact" data-intent="体验">预约体验</a>
+      <a href="#contact" data-intent="同行">事业同行</a>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <strong>亿柒健康管理</strong>
+            <p>内调外养，内外兼修</p>
+          </div>
+          <div class="footer-links">
+            <a href="#about">关于亿柒</a>
+            <a href="#projects">核心项目</a>
+            <a href="#membership">会员体系</a>
+            <a href="#contact">联系我们</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          © 2026 YiQi Health. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const header = document.querySelector("#site-header");
+      const menuButton = document.querySelector("#menu-button");
+      const navLinks = document.querySelector("#nav-links");
+      const navAnchors = navLinks.querySelectorAll("a");
+      const navSections = Array.from(navAnchors)
+        .map((anchor) => document.querySelector(anchor.getAttribute("href")))
+        .filter(Boolean);
+      const revealItems = document.querySelectorAll(".reveal");
+      const contactForm = document.querySelector("#contact-form");
+      const contactSection = document.querySelector("#contact");
+      const formStatus = document.querySelector("#form-status");
+      const actionDock = document.querySelector("#action-dock");
+      const intentSelect = document.querySelector("#intent-select");
+      const contactEntries = document.querySelectorAll(".contact-entry");
+      const intentTriggers = document.querySelectorAll("[data-intent]");
+      let contactIsVisible = false;
+
+      const updateHeader = () => {
+        header.classList.toggle("scrolled", window.scrollY > 16);
+        actionDock.classList.toggle(
+          "visible",
+          window.scrollY > 520 && !contactIsVisible,
+        );
+      };
+
+      const closeMenu = () => {
+        navLinks.classList.remove("open");
+        menuButton.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "打开导航菜单");
+      };
+
+      updateHeader();
+      window.addEventListener("scroll", updateHeader, { passive: true });
+
+      menuButton.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        menuButton.classList.toggle("open", isOpen);
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute(
+          "aria-label",
+          isOpen ? "关闭导航菜单" : "打开导航菜单",
+        );
+      });
+
+      navAnchors.forEach((anchor) => {
+        anchor.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!header.contains(event.target)) closeMenu();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMenu();
+      });
+
+      const selectIntent = (intent) => {
+        intentSelect.value = intent;
+        contactEntries.forEach((entry) => {
+          entry.classList.toggle("selected", entry.dataset.intent === intent);
+        });
+      };
+
+      intentTriggers.forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          const intent = trigger.dataset.intent;
+          selectIntent(intent);
+
+          if (trigger.classList.contains("contact-entry")) {
+            window.setTimeout(() => {
+              contactForm.scrollIntoView({ behavior: "smooth", block: "center" });
+              contactForm.elements.name.focus({ preventScroll: true });
+            }, 100);
+          }
+        });
+      });
+
+      intentSelect.addEventListener("change", () => {
+        selectIntent(intentSelect.value);
+      });
+
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -40px" },
+        );
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+
+        const sectionObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              navAnchors.forEach((anchor) => {
+                anchor.classList.toggle(
+                  "active",
+                  anchor.getAttribute("href") === `#${entry.target.id}`,
+                );
+              });
+            });
+          },
+          { threshold: 0.22, rootMargin: "-96px 0px -55%" },
+        );
+
+        navSections.forEach((section) => sectionObserver.observe(section));
+
+        const contactObserver = new IntersectionObserver(
+          ([entry]) => {
+            contactIsVisible = entry.isIntersecting;
+            updateHeader();
+          },
+          { threshold: 0.08 },
+        );
+
+        contactObserver.observe(contactSection);
+      } else {
+        revealItems.forEach((item) => item.classList.add("visible"));
+      }
+
+      contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        formStatus.textContent =
+          "提交成功，感谢您的关注。亿柒工作人员会根据您选择的咨询类型，尽快与您联系。";
+        contactForm.reset();
+        selectIntent("体验");
+      });
+    </script>
+  </body>
+</html>
